@@ -12,9 +12,7 @@ const RestaurantMenu = () => {
     <div className="restaurant-menu-container">
       <div className="image-section">
         <img src={restaurant.image} alt={restaurant.name} className="restaurant-image" />
-        <div className="button-container">
-          <button className="order-button">ADD TO CART</button>
-        </div>
+       
       </div>
       <div className="details-section">
         <h1 className="restaurant-name">Restaurant Name: {restaurant.name}</h1>
@@ -24,6 +22,9 @@ const RestaurantMenu = () => {
             restaurant.menu.map((menuItem, index) => (
               <div key={index} className="menu-item">
                 {menuItem.item} - ${menuItem.price}
+                <div className="button-container">
+          <button className="order-button">ADD TO CART</button>
+        </div>
               </div>
             ))
           ) : (

@@ -35317,14 +35317,6 @@ const Card = ({ id, image, name, cuisine, address })=>{
                         fileName: "src/component/Card.js",
                         lineNumber: 10,
                         columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "add-to-cart-button",
-                        children: "ADD TO CART"
-                    }, void 0, false, {
-                        fileName: "src/component/Card.js",
-                        lineNumber: 11,
-                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
@@ -35904,33 +35896,16 @@ const RestaurantMenu = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "image-section",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: restaurant.image,
-                        alt: restaurant.name,
-                        className: "restaurant-image"
-                    }, void 0, false, {
-                        fileName: "src/component/RestaurantMenu.js",
-                        lineNumber: 14,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "button-container",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            className: "order-button",
-                            children: "ADD TO CART"
-                        }, void 0, false, {
-                            fileName: "src/component/RestaurantMenu.js",
-                            lineNumber: 16,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/component/RestaurantMenu.js",
-                        lineNumber: 15,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: restaurant.image,
+                    alt: restaurant.name,
+                    className: "restaurant-image"
+                }, void 0, false, {
+                    fileName: "src/component/RestaurantMenu.js",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
                 fileName: "src/component/RestaurantMenu.js",
                 lineNumber: 13,
                 columnNumber: 7
@@ -35946,7 +35921,7 @@ const RestaurantMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/component/RestaurantMenu.js",
-                        lineNumber: 20,
+                        lineNumber: 18,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -35954,7 +35929,7 @@ const RestaurantMenu = ()=>{
                         children: "Menu:"
                     }, void 0, false, {
                         fileName: "src/component/RestaurantMenu.js",
-                        lineNumber: 21,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35964,26 +35939,41 @@ const RestaurantMenu = ()=>{
                                 children: [
                                     menuItem.item,
                                     " - $",
-                                    menuItem.price
+                                    menuItem.price,
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "button-container",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                            className: "order-button",
+                                            children: "ADD TO CART"
+                                        }, void 0, false, {
+                                            fileName: "src/component/RestaurantMenu.js",
+                                            lineNumber: 26,
+                                            columnNumber: 11
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/component/RestaurantMenu.js",
+                                        lineNumber: 25,
+                                        columnNumber: 17
+                                    }, undefined)
                                 ]
                             }, index, true, {
                                 fileName: "src/component/RestaurantMenu.js",
-                                lineNumber: 25,
+                                lineNumber: 23,
                                 columnNumber: 15
                             }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
                                 fileName: "src/component/RestaurantMenu.js",
-                                lineNumber: 31,
+                                lineNumber: 32,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/component/RestaurantMenu.js",
-                            lineNumber: 30,
+                            lineNumber: 31,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/component/RestaurantMenu.js",
-                        lineNumber: 22,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -35994,13 +35984,13 @@ const RestaurantMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/component/RestaurantMenu.js",
-                        lineNumber: 35,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/component/RestaurantMenu.js",
-                lineNumber: 19,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined)
         ]

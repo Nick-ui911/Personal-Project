@@ -8,7 +8,7 @@ const Card = ({ id, image, name, cuisine, address }) => {
         <h2 className="card-name">{name}</h2>
         <h3 className="card-cuisine">{cuisine}</h3>
         <h4 className="card-address">{address}</h4>
-        <button className="add-to-cart-button">ADD TO CART</button>
+        
       </div>
     </div>
   );
