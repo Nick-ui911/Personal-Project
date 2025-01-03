@@ -42,7 +42,7 @@ const appRouter = createBrowserRouter([
     path: "/",
     element: <Applayout />,
     errorElement: <Error />,
-    children: [
+    children: [ 
       {
         path: "/",
         element: <Body />,
