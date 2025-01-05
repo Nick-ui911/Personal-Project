@@ -23,7 +23,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 .nav-link:hover {
-    background-color: #007bff;
+    background-color: #fe4952;
     color: white;
     border-radius: 5px;
 }
@@ -1021,3 +1021,266 @@ h1 {
     border-bottom: none;
   }
 
+  .restaurant-menuimage {
+    /* Container Styling */
+    display: block;
+    margin: 0 auto; /* Center the image */
+    padding: 10px; /* Add some padding around the image */
+
+    /* Image Styling */
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+
+    /* Responsive Design */
+    max-width: 100%; /* Prevent overflow on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+
+    /* Hover Effects */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.restaurant-menuimage:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+.restaurant-menuimage {
+  /* Container Styling */
+  display: block;
+  margin: 0 auto; /* Center the image */
+  padding: 5px; /* Reduced padding for smaller image */
+
+  /* Image Styling */
+  width: 150px; /* Smaller width */
+  height: 100px; /* Smaller height */
+  border-radius: 10px; /* Slightly smaller rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+
+  /* Responsive Design */
+  max-width: 100%; /* Prevent overflow on smaller screens */
+  height: auto; /* Maintain aspect ratio */
+
+  /* Hover Effects */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.restaurant-menuimage:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+/* Container for the entire cart */
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart title styling */
+.cart-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Clear cart button styling */
+.clear-cart-btn {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.clear-cart-btn:hover {
+    background-color: #ff4c4c;
+    transform: scale(1.05);
+}
+
+/* Container for cart items */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual cart item styling */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling for cart items */
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Details section for cart items */
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.cart-item-price {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Quantity and action buttons */
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #ff4c4c;
+}
+
+.quantity-text {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Remove button styling */
+.remove-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #ff4c4c;
+}
+
+/* Total price section */
+.cart-total {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.cart-total span {
+    color: #ff6b6b;
+}
+/* Container for the food item */
+/* Container for the food item */
+.food-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Food item image */
+  .food-item-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+  
+  /* Food item details container */
+  .food-item-details {
+    flex-grow: 1;
+  }
+  
+  /* Food item name */
+  .food-item-name {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Food item price */
+  .food-item-price {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Food item address */
+  .food-item-address {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Food item time */
+  .food-item-time {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Remove button */
+  .remove-item-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-item-btn:hover {
+    background-color: #ff1a1a;
+  }

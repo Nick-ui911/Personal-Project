@@ -6,7 +6,7 @@ const DineoutCard = ({ id, image, name, time, address, addToCart }) => {
       <div className="image-section">
         <img src={image} alt={name} className="restaurant-image" />
         <div className="button-container">
-          <button className="order-button">BOOK NOW</button>
+          
         </div>
       </div>
       <div className="details-section">

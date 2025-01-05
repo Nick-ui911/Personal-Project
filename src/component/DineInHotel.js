@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/CartSlice";
 
 
 const DineInHotel = () => {
@@ -16,12 +18,18 @@ const DineInHotel = () => {
         setDitem(json);
     };
 
+    const dispatch = useDispatch();
+
+  const addHotelItem = (item) => {
+    dispatch(addItem(item));
+  };
+
     return (
         <div className="dinein-container">
             <div className="image-section">
                 <img src={Ditem.image} alt={Ditem.name} className="hotel-image" />
                 <div className="button-container">
-                    <button className="order-button">BOOK NOW</button>
+                    <button className="order-button" onClick={()=>addHotelItem(Ditem)}>BOOK NOW</button>
                 </div>
             </div>
             <div className="details-section">

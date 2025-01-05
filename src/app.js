@@ -16,6 +16,8 @@ import About from "./component/About";
 import DineInHotel from "./component/DineInHotel";
 import UserAddress from "./component/UserAddress";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 // import Dineout from "./component/Dineout";
 // import Instamart from "./component/instamart";
@@ -29,11 +31,13 @@ const Applayout = () => {
   });
 
   return (
+   <Provider store = {store}>
     <UserContext.Provider value={{ user : user,setUser : setUser }}>
       <Header />
       <Outlet />
       <Footer />
     </UserContext.Provider>
+   </Provider>
   );
 };
 // here we do nexted route configuration , in this configuration header and footer component will always there the only what change is outlet according route

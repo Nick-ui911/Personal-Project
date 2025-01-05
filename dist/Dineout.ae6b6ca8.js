@@ -787,15 +787,7 @@ const DineoutCard = ({ id, image, name, time, address, addToCart })=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "button-container",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            className: "order-button",
-                            children: "BOOK NOW"
-                        }, void 0, false, {
-                            fileName: "src/component/DineoutCard.js",
-                            lineNumber: 9,
-                            columnNumber: 11
-                        }, undefined)
+                        className: "button-container"
                     }, void 0, false, {
                         fileName: "src/component/DineoutCard.js",
                         lineNumber: 8,
