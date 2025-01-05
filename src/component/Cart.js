@@ -27,8 +27,8 @@ const Cart = () => {
       </button>
 
       <div className="cart-items">
-        {cartItems.map((item) => (
-          <FoodItem key={item.id} {...item} />
+        {cartItems.map((item,index) => (
+          <FoodItem  key={`${item.id}-${index}`} {...item} />
         ))}
       </div>
     </div>

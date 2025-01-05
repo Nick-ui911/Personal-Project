@@ -559,6 +559,8 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 120px;
+    height: 70px;
 }
 
 .order-button:hover {
@@ -1283,4 +1285,33 @@ h1 {
   
   .remove-item-btn:hover {
     background-color: #ff1a1a;
+  }
+  /* Quantity controls container */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  /* Quantity buttons */
+  .quantity-btn {
+    background-color: #121111;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quantity-btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Quantity display */
+  .quantity {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
   }

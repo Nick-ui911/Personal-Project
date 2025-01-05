@@ -581,6 +581,8 @@ h1 {
   background-color: #ff5722;
   border: none;
   border-radius: 5px;
+  width: 120px;
+  height: 70px;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: bold;
@@ -1063,10 +1065,6 @@ h1 {
   transition: background-color .3s;
 }
 
-.quantity-btn:hover {
-  background-color: #ff4c4c;
-}
-
 .quantity-text {
   color: #333;
   font-size: 1.1rem;
@@ -1153,5 +1151,32 @@ h1 {
 
 .remove-item-btn:hover {
   background-color: #ff1a1a;
+}
+
+.quantity-controls {
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  display: flex;
+}
+
+.quantity-btn {
+  cursor: pointer;
+  background-color: #121111;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 16px;
+  transition: background-color .3s;
+}
+
+.quantity-btn:hover {
+  background-color: #ddd;
+}
+
+.quantity {
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

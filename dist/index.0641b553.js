@@ -37099,6 +37099,8 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addItem", ()=>addItem);
 parcelHelpers.export(exports, "removeItem", ()=>removeItem);
 parcelHelpers.export(exports, "clearCart", ()=>clearCart);
+parcelHelpers.export(exports, "increaseQuantity", ()=>increaseQuantity);
+parcelHelpers.export(exports, "decreaseQuantity", ()=>decreaseQuantity);
 var _toolkit = require("@reduxjs/toolkit");
 const CartSlice = (0, _toolkit.createSlice)({
     name: "cart",
@@ -37107,17 +37109,35 @@ const CartSlice = (0, _toolkit.createSlice)({
     },
     reducers: {
         addItem: (state, action)=>{
-            state.items.push(action.payload);
+            const existingItem = state.items.find((item)=>item.id === action.payload.id);
+            if (existingItem) existingItem.quantity += 1; // Increase quantity if item already exists
+            else state.items.push({
+                ...action.payload,
+                quantity: 1
+            }); // Add new item with quantity 1
+        },
+        increaseQuantity: (state, action)=>{
+            const item = state.items.find((item)=>item.id === action.payload.id);
+            if (item) item.quantity += 1; // Increase quantity by 1
+        },
+        decreaseQuantity: (state, action)=>{
+            const item = state.items.find((item)=>item.id === action.payload.id);
+            if (item) {
+                if (item.quantity > 1) item.quantity -= 1; // Decrease quantity by 1
+                else // Remove item if quantity is 1
+                state.items = state.items.filter((item)=>item.id !== action.payload.id);
+            }
         },
         removeItem: (state, action)=>{
-            state.items.splice(state.items.indexOf(action.payload), 1);
+            const itemId = action.payload.id; // Get the item's id from the payload
+            state.items = state.items.filter((item)=>item.id !== itemId); // Remove the item with the matching id
         },
         clearCart: (state, action)=>{
             state.items = [];
         }
     }
 });
-const { addItem, removeItem, clearCart } = CartSlice.actions;
+const { addItem, removeItem, clearCart, increaseQuantity, decreaseQuantity } = CartSlice.actions;
 exports.default = CartSlice.reducer;
 
 },{"@reduxjs/toolkit":"fuua8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fuua8":[function(require,module,exports,__globalThis) {
@@ -41640,9 +41660,9 @@ const Cart = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "cart-items",
-                children: cartItems.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _foodItemDefault.default), {
+                children: cartItems.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _foodItemDefault.default), {
                         ...item
-                    }, item.id, false, {
+                    }, `${item.id}-${index}`, false, {
                         fileName: "src/component/Cart.js",
                         lineNumber: 31,
                         columnNumber: 11
@@ -41704,11 +41724,23 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _cartSlice = require("../utils/CartSlice");
 var _reactRedux = require("react-redux");
 var _s = $RefreshSig$();
-const FoodItem = ({ id, name, item, price, image, address, time })=>{
+const FoodItem = ({ id, name, item, price, image, address, time, quantity })=>{
     _s();
     const dispatch = (0, _reactRedux.useDispatch)();
     const removeCartItem = ()=>{
-        dispatch((0, _cartSlice.removeItem)());
+        dispatch((0, _cartSlice.removeItem)({
+            id
+        }));
+    };
+    const handleIncreaseQuantity = ()=>{
+        dispatch((0, _cartSlice.increaseQuantity)({
+            id
+        })); // Increase quantity
+    };
+    const handleDecreaseQuantity = ()=>{
+        dispatch((0, _cartSlice.decreaseQuantity)({
+            id
+        })); // Decrease quantity
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "food-item",
@@ -41719,7 +41751,7 @@ const FoodItem = ({ id, name, item, price, image, address, time })=>{
                 className: "food-item-image"
             }, void 0, false, {
                 fileName: "src/component/FoodItem.js",
-                lineNumber: 15,
+                lineNumber: 24,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41730,7 +41762,7 @@ const FoodItem = ({ id, name, item, price, image, address, time })=>{
                         children: item
                     }, void 0, false, {
                         fileName: "src/component/FoodItem.js",
-                        lineNumber: 17,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -41741,7 +41773,7 @@ const FoodItem = ({ id, name, item, price, image, address, time })=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/component/FoodItem.js",
-                        lineNumber: 18,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -41749,7 +41781,7 @@ const FoodItem = ({ id, name, item, price, image, address, time })=>{
                         children: address
                     }, void 0, false, {
                         fileName: "src/component/FoodItem.js",
-                        lineNumber: 19,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -41757,7 +41789,42 @@ const FoodItem = ({ id, name, item, price, image, address, time })=>{
                         children: time
                     }, void 0, false, {
                         fileName: "src/component/FoodItem.js",
-                        lineNumber: 20,
+                        lineNumber: 29,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "quantity-controls",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "quantity-btn",
+                                onClick: handleDecreaseQuantity,
+                                children: "-"
+                            }, void 0, false, {
+                                fileName: "src/component/FoodItem.js",
+                                lineNumber: 31,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "quantity",
+                                children: quantity
+                            }, void 0, false, {
+                                fileName: "src/component/FoodItem.js",
+                                lineNumber: 34,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "quantity-btn",
+                                onClick: handleIncreaseQuantity,
+                                children: "+"
+                            }, void 0, false, {
+                                fileName: "src/component/FoodItem.js",
+                                lineNumber: 35,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/component/FoodItem.js",
+                        lineNumber: 30,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41766,19 +41833,19 @@ const FoodItem = ({ id, name, item, price, image, address, time })=>{
                         children: "Remove"
                     }, void 0, false, {
                         fileName: "src/component/FoodItem.js",
-                        lineNumber: 21,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/component/FoodItem.js",
-                lineNumber: 16,
+                lineNumber: 25,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/component/FoodItem.js",
-        lineNumber: 14,
+        lineNumber: 23,
         columnNumber: 5
     }, undefined);
 };
