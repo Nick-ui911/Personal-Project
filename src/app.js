@@ -9,7 +9,7 @@ import Error from "./component/Error";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import RestaurantMenu from "./component/RestaurantMenu";
 import Login from "./component/loginForm";
-import Profile from "./component/profile";
+import Fitness from "./component/Fitness";
 import { Shimmer } from "./component/shimmer";
 import Instaitem from "./component/InstamartItem";
 import About from "./component/About";
@@ -18,6 +18,17 @@ import UserAddress from "./component/UserAddress";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import store from "./utils/store";
+import Carousal from "./component/carousal";
+import HomeKitchen from "./component/HomeKitchen";
+import Beauty from "./component/Beauty";
+import Stationary from "./component/Stationary";
+import Electronics from "./component/Electronics";
+import Books from "./component/Books";
+import Carousals from "./component/carousal";
+import Clothing from "./component/Clothing";
+import Toys from "./component/Toys";
+import Mobiles from "./component/Mobiles";
+
 
 // import Dineout from "./component/Dineout";
 // import Instamart from "./component/instamart";
@@ -26,7 +37,7 @@ const Instamart = lazy(() => import("./component/instamart"));
 
 const Applayout = () => {
   const [user, setUser] = useState({
-    name: "Nikhil",
+    name: "user",
     email: "nbaghel392@gmail.com",
   });
 
@@ -49,7 +60,11 @@ const appRouter = createBrowserRouter([
     children: [ 
       {
         path: "/",
-        element: <Body />,
+        element: <Carousals/>,
+      },
+      {
+        path: "/restaurant",
+        element: <Body/>,
       },
       {
         path: "/about",
@@ -85,8 +100,8 @@ const appRouter = createBrowserRouter([
         element: <Instaitem />,
       },
       {
-        path: "/profile",
-        element: <Profile />,
+        path: "/fitness",
+        element: <Fitness />,
       },
       {
         path: "/dineout",
@@ -104,6 +119,44 @@ const appRouter = createBrowserRouter([
         path: "/useraddress",
         element: <UserAddress />,
       },
+      {
+        path: "/homekitchen",
+        element: <HomeKitchen />,
+      },
+      {
+        path: "/stationary",
+        element: <Stationary />,
+      },
+      {
+        path: "/beauty",
+        element: <Beauty />,
+      },
+      {
+        path: "/electronics",
+        element: <Electronics />,
+      },
+      {
+        path: "/homekitchen",
+        element: <HomeKitchen/>,
+      },
+      {
+        path: "/books",
+        element: <Books />,
+      },
+      {
+        path: "/clothing",
+        element: <Clothing/>,
+      },
+      {
+        path: "/toys",
+        element: <Toys/>,
+      },
+      {
+        path: "/mobiles",
+        element: <Mobiles/>,
+      },
+
+
     ],
   },
 ]);

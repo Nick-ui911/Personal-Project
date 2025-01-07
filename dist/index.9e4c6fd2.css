@@ -6,15 +6,19 @@ body {
 }
 
 .header {
+  z-index: 1000;
   background-color: #fff;
   border: 1px solid #ccc;
+  border-bottom-color: #ddd;
   border-radius: 8px;
   justify-content: space-between;
   align-items: center;
   margin: 10px;
   padding: 10px;
   display: flex;
-  box-shadow: 0 2px 5px #0000001a;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px #0000001a;
 }
 
 .nav-link {
@@ -26,7 +30,7 @@ body {
 
 .nav-link:hover {
   color: #fff;
-  background-color: #fe4952;
+  background-color: #ceecf6;
   border-radius: 5px;
 }
 
@@ -57,8 +61,25 @@ body {
   height: auto;
 }
 
+.login-button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color .3s, transform .2s;
+}
+
 .login-button:hover {
-  background-color: #218838;
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.login-button:active {
+  background-color: #004080;
+  transform: scale(.95);
 }
 
 .card {
@@ -1178,5 +1199,143 @@ h1 {
   color: #333;
   font-size: 16px;
   font-weight: bold;
+}
+
+.image {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px #0003;
+}
+
+.main {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.image-container {
+  margin-bottom: 20px;
+}
+
+.image-container .image {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.carousal {
+  margin-top: 20px;
+}
+
+.carousel-item {
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px #0003;
+}
+
+.react-multi-carousel-dot button {
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+}
+
+.react-multi-carousel-dot--active button {
+  background-color: #333;
+}
+
+.react-multi-carousel-arrow {
+  color: #fff;
+  background-color: #00000080;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: background-color .3s;
+  display: flex;
+}
+
+.react-multi-carousel-arrow:hover {
+  background-color: #000c;
+}
+
+.react-multi-carousel-arrow:before {
+  font-size: 20px;
+}
+
+.item {
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.item:active {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px #0003;
+}
+
+.carousel-image {
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.carousel-title {
+  color: #333;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.heading h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.heading p {
+  color: #666;
+  font-size: 16px;
 }
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

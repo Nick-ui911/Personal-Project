@@ -28,7 +28,7 @@ const UserCoordinates = () => {
             <h1 className="title">Location</h1>
             {error && <p className="error-message">Error: {error}</p>}
             {coordinates.lat && coordinates.lng ? (
-                <LoadScript googleMapsApiKey="google api key">
+                <LoadScript googleMapsApiKey="AIzaSyDhIS5oQM6_haO0M-FXZgJNgzwVRCYLqeY">
                     <GoogleMap
                         mapContainerStyle={{ height: '400px', width: '100%' }}
                         center={coordinates}

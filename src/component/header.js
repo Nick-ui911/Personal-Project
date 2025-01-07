@@ -9,7 +9,7 @@ const Header = () => {
       <img
         className="logo"
         alt="logo"
-        src="https://cdn.octopix.in/uploads/company-logo/2020/11/19/food-villa-pSJVhwoN8KxgwV9jtuB1MlosJ0ejoKfiBiVO1jJPLM61shyarbxVvjIFy3DVpbUML8eBxcUo7BOWXQcd-350x350.jpg"
+        src="https://alphasilver.productsalphawizz.com/uploads/media/2024/newlogo22.png"
       />
 
       <nav className="nav-item">
@@ -20,28 +20,25 @@ const Header = () => {
             </Link>
           </li>
           <li>
+            <Link className="nav-link" to="/restaurant">
+              RESTAURANT
+            </Link>
+          </li>
+          <li>
             <Link className="nav-link" to="/about">
               ABOUT US
             </Link>
           </li>
-          <li>
-            <Link className="nav-link" to="/contact">
-              CONTACT US
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/cart">
-              CART
-            </Link>
-          </li>
+          
+         
           <li>
             <Link className="nav-link" to="/instamart">
-              INSTAMART
+              GROCERY
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="/profile">
-              PROFILE
+            <Link className="nav-link" to="/fitness">
+              FITNESS
             </Link>
           </li>
           <li>
@@ -52,6 +49,11 @@ const Header = () => {
           <li>
             <Link className="nav-link" to="/useraddress">
               LOCATION
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-link" to="/cart">
+              CART
             </Link>
           </li>
         </ul>

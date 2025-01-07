@@ -23,6 +23,7 @@ const Body = () => {
 
   return (
     <>
+    
       <div className="searchBar">
         <input
           type="text"
@@ -50,6 +51,13 @@ const Body = () => {
           Search
         </button>
         {/* <p> you typed : {searchtxt}</p> */}
+      </div>
+      <div className="image-container">
+      <img
+        className="image"
+        alt="image"
+        src="https://alphasilver.productsalphawizz.com/uploads/media/2024/7mdfskoasdhgoihgio047805.png"
+      />
       </div>
       <div className="allcards">
         {filteredRestaurants.length > 0 ? (

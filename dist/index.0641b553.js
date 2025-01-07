@@ -2957,8 +2957,8 @@ var _restaurantMenu = require("./component/RestaurantMenu");
 var _restaurantMenuDefault = parcelHelpers.interopDefault(_restaurantMenu);
 var _loginForm = require("./component/loginForm");
 var _loginFormDefault = parcelHelpers.interopDefault(_loginForm);
-var _profile = require("./component/profile");
-var _profileDefault = parcelHelpers.interopDefault(_profile);
+var _fitness = require("./component/Fitness");
+var _fitnessDefault = parcelHelpers.interopDefault(_fitness);
 var _shimmer = require("./component/shimmer");
 var _instamartItem = require("./component/InstamartItem");
 var _instamartItemDefault = parcelHelpers.interopDefault(_instamartItem);
@@ -2973,6 +2973,24 @@ var _userContextDefault = parcelHelpers.interopDefault(_userContext);
 var _reactRedux = require("react-redux");
 var _store = require("./utils/store");
 var _storeDefault = parcelHelpers.interopDefault(_store);
+var _carousal = require("./component/carousal");
+var _carousalDefault = parcelHelpers.interopDefault(_carousal);
+var _homeKitchen = require("./component/HomeKitchen");
+var _homeKitchenDefault = parcelHelpers.interopDefault(_homeKitchen);
+var _beauty = require("./component/Beauty");
+var _beautyDefault = parcelHelpers.interopDefault(_beauty);
+var _stationary = require("./component/Stationary");
+var _stationaryDefault = parcelHelpers.interopDefault(_stationary);
+var _electronics = require("./component/Electronics");
+var _electronicsDefault = parcelHelpers.interopDefault(_electronics);
+var _books = require("./component/Books");
+var _booksDefault = parcelHelpers.interopDefault(_books);
+var _clothing = require("./component/Clothing");
+var _clothingDefault = parcelHelpers.interopDefault(_clothing);
+var _toys = require("./component/Toys");
+var _toysDefault = parcelHelpers.interopDefault(_toys);
+var _mobiles = require("./component/Mobiles");
+var _mobilesDefault = parcelHelpers.interopDefault(_mobiles);
 var _s = $RefreshSig$();
 // import Dineout from "./component/Dineout";
 // import Instamart from "./component/instamart";
@@ -2983,7 +3001,7 @@ _c1 = Instamart;
 const Applayout = ()=>{
     _s();
     const [user, setUser] = (0, _react.useState)({
-        name: "Nikhil",
+        name: "user",
         email: "nbaghel392@gmail.com"
     });
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRedux.Provider), {
@@ -2996,32 +3014,32 @@ const Applayout = ()=>{
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 36,
+                    lineNumber: 47,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 37,
+                    lineNumber: 48,
                     columnNumber: 7
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 38,
+                    lineNumber: 49,
                     columnNumber: 7
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/app.js",
-            lineNumber: 35,
+            lineNumber: 46,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/app.js",
-        lineNumber: 34,
+        lineNumber: 45,
         columnNumber: 4
     }, undefined);
 };
-_s(Applayout, "ckB8dKWTyou/+h1+kTgSQ1ZP5YY=");
+_s(Applayout, "/UzXyhExByCk0Deyi2JH2mxgNj8=");
 _c2 = Applayout;
 // here we do nexted route configuration , in this configuration header and footer component will always there the only what change is outlet according route
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
@@ -3029,20 +3047,28 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Applayout, {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 47,
+            lineNumber: 58,
             columnNumber: 14
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 48,
+            lineNumber: 59,
             columnNumber: 19
         }, undefined),
         children: [
             {
                 path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carousalDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 63,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/restaurant",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 52,
+                    lineNumber: 67,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3050,7 +3076,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 56,
+                    lineNumber: 71,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3058,7 +3084,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/cart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 60,
+                    lineNumber: 75,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3066,7 +3092,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 64,
+                    lineNumber: 79,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3074,7 +3100,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/login",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginFormDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 68,
+                    lineNumber: 83,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3082,7 +3108,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurant/:id",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 72,
+                    lineNumber: 87,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3091,17 +3117,17 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
                         fileName: "src/app.js",
-                        lineNumber: 78,
+                        lineNumber: 93,
                         columnNumber: 31
                     }, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Instamart, {}, void 0, false, {
                         fileName: "src/app.js",
-                        lineNumber: 79,
+                        lineNumber: 94,
                         columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 78,
+                    lineNumber: 93,
                     columnNumber: 11
                 }, undefined)
             },
@@ -3109,15 +3135,15 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/instamart/:id1",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _instamartItemDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 85,
+                    lineNumber: 100,
                     columnNumber: 18
                 }, undefined)
             },
             {
-                path: "/profile",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileDefault.default), {}, void 0, false, {
+                path: "/fitness",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _fitnessDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 89,
+                    lineNumber: 104,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3126,17 +3152,17 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
                         fileName: "src/app.js",
-                        lineNumber: 94,
+                        lineNumber: 109,
                         columnNumber: 31
                     }, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Dineout, {}, void 0, false, {
                         fileName: "src/app.js",
-                        lineNumber: 95,
+                        lineNumber: 110,
                         columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 94,
+                    lineNumber: 109,
                     columnNumber: 11
                 }, undefined)
             },
@@ -3144,7 +3170,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/dineout/:id2",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dineInHotelDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 101,
+                    lineNumber: 116,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3152,7 +3178,79 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/useraddress",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userAddressDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 105,
+                    lineNumber: 120,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/homekitchen",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeKitchenDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 124,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/stationary",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _stationaryDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 128,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/beauty",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _beautyDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 132,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/electronics",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _electronicsDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 136,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/homekitchen",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeKitchenDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 140,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/books",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _booksDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 144,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/clothing",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _clothingDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 148,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/toys",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toysDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 152,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/mobiles",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mobilesDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 156,
                     columnNumber: 18
                 }, undefined)
             }
@@ -3164,7 +3262,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/app.js",
-    lineNumber: 112,
+    lineNumber: 165,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2;
@@ -3177,7 +3275,7 @@ $RefreshReg$(_c2, "Applayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./component/header":"gSRBz","./component/body":"haGzI","./component/footer":"aVVjV","./component/Contact":"3He1d","./component/Error":"cosKY","react-router-dom":"9xmpe","./component/RestaurantMenu":"kMuXm","./component/loginForm":"f5lXh","./component/profile":"fNik9","./component/shimmer":"bltIQ","./component/InstamartItem":"c3CkU","6c131f21e7434c5":"iMHwG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./component/Cart":"dclnc","./component/About":"94Koj","./component/DineInHotel":"9onQj","./component/UserAddress":"3ZX1W","f29e4a8aba32a638":"gKl1t","./utils/UserContext":"c5vgB","react-redux":"62sf7","./utils/store":"k2jPV"}],"iTorj":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./component/header":"gSRBz","./component/body":"haGzI","./component/footer":"aVVjV","./component/Contact":"3He1d","./component/Error":"cosKY","react-router-dom":"9xmpe","./component/RestaurantMenu":"kMuXm","./component/loginForm":"f5lXh","./component/shimmer":"bltIQ","./component/InstamartItem":"c3CkU","6c131f21e7434c5":"iMHwG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./component/Cart":"dclnc","./component/About":"94Koj","./component/DineInHotel":"9onQj","./component/UserAddress":"3ZX1W","f29e4a8aba32a638":"gKl1t","./utils/UserContext":"c5vgB","react-redux":"62sf7","./utils/store":"k2jPV","./component/Fitness":"cDiBL","./component/carousal":"d6pKb","./component/HomeKitchen":"4DMIN","./component/Beauty":"g048w","./component/Stationary":"b6QeF","./component/Electronics":"jun0h","./component/Books":"jtVmd","./component/Clothing":"kKzcM","./component/Toys":"ievuM","./component/Mobiles":"1iu9v"}],"iTorj":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -27444,7 +27542,7 @@ const Header = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "logo",
                 alt: "logo",
-                src: "https://cdn.octopix.in/uploads/company-logo/2020/11/19/food-villa-pSJVhwoN8KxgwV9jtuB1MlosJ0ejoKfiBiVO1jJPLM61shyarbxVvjIFy3DVpbUML8eBxcUo7BOWXQcd-350x350.jpg"
+                src: "https://alphasilver.productsalphawizz.com/uploads/media/2024/newlogo22.png"
             }, void 0, false, {
                 fileName: "src/component/header.js",
                 lineNumber: 9,
@@ -27472,8 +27570,8 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 className: "nav-link",
-                                to: "/about",
-                                children: "ABOUT US"
+                                to: "/restaurant",
+                                children: "RESTAURANT"
                             }, void 0, false, {
                                 fileName: "src/component/header.js",
                                 lineNumber: 23,
@@ -27487,8 +27585,8 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 className: "nav-link",
-                                to: "/contact",
-                                children: "CONTACT US"
+                                to: "/about",
+                                children: "ABOUT US"
                             }, void 0, false, {
                                 fileName: "src/component/header.js",
                                 lineNumber: 28,
@@ -27502,46 +27600,31 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 className: "nav-link",
-                                to: "/cart",
-                                children: "CART"
-                            }, void 0, false, {
-                                fileName: "src/component/header.js",
-                                lineNumber: 33,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/component/header.js",
-                            lineNumber: 32,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                className: "nav-link",
                                 to: "/instamart",
-                                children: "INSTAMART"
+                                children: "GROCERY"
                             }, void 0, false, {
                                 fileName: "src/component/header.js",
-                                lineNumber: 38,
+                                lineNumber: 35,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/component/header.js",
-                            lineNumber: 37,
+                            lineNumber: 34,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 className: "nav-link",
-                                to: "/profile",
-                                children: "PROFILE"
+                                to: "/fitness",
+                                children: "FITNESS"
                             }, void 0, false, {
                                 fileName: "src/component/header.js",
-                                lineNumber: 43,
+                                lineNumber: 40,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/component/header.js",
-                            lineNumber: 42,
+                            lineNumber: 39,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27551,12 +27634,12 @@ const Header = ()=>{
                                 children: "DINEOUT"
                             }, void 0, false, {
                                 fileName: "src/component/header.js",
-                                lineNumber: 48,
+                                lineNumber: 45,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/component/header.js",
-                            lineNumber: 47,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27566,12 +27649,27 @@ const Header = ()=>{
                                 children: "LOCATION"
                             }, void 0, false, {
                                 fileName: "src/component/header.js",
-                                lineNumber: 53,
+                                lineNumber: 50,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/component/header.js",
-                            lineNumber: 52,
+                            lineNumber: 49,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                className: "nav-link",
+                                to: "/cart",
+                                children: "CART"
+                            }, void 0, false, {
+                                fileName: "src/component/header.js",
+                                lineNumber: 55,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/component/header.js",
+                            lineNumber: 54,
                             columnNumber: 11
                         }, undefined)
                     ]
@@ -27589,7 +27687,7 @@ const Header = ()=>{
                 children: user.name
             }, void 0, false, {
                 fileName: "src/component/header.js",
-                lineNumber: 59,
+                lineNumber: 61,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27600,12 +27698,12 @@ const Header = ()=>{
                     children: "Login"
                 }, void 0, false, {
                     fileName: "src/component/header.js",
-                    lineNumber: 66,
+                    lineNumber: 68,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/component/header.js",
-                lineNumber: 65,
+                lineNumber: 67,
                 columnNumber: 7
             }, undefined)
         ]
@@ -35047,7 +35145,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/component/body.js",
-                        lineNumber: 27,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35059,13 +35157,29 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/component/body.js",
-                        lineNumber: 43,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/component/body.js",
-                lineNumber: 26,
+                lineNumber: 27,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "image-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "image",
+                    alt: "image",
+                    src: "https://alphasilver.productsalphawizz.com/uploads/media/2024/7mdfskoasdhgoihgio047805.png"
+                }, void 0, false, {
+                    fileName: "src/component/body.js",
+                    lineNumber: 56,
+                    columnNumber: 7
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/component/body.js",
+                lineNumber: 55,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35077,23 +35191,23 @@ const Body = ()=>{
                             ...restaurant
                         }, void 0, false, {
                             fileName: "src/component/body.js",
-                            lineNumber: 62,
+                            lineNumber: 70,
                             columnNumber: 15
                         }, undefined)
                     }, restaurant.id, false, {
                         fileName: "src/component/body.js",
-                        lineNumber: 57,
+                        lineNumber: 65,
                         columnNumber: 13
                     }, undefined)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                     children: "No data available"
                 }, void 0, false, {
                     fileName: "src/component/body.js",
-                    lineNumber: 66,
+                    lineNumber: 74,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/component/body.js",
-                lineNumber: 54,
+                lineNumber: 62,
                 columnNumber: 7
             }, undefined)
         ]
@@ -41226,128 +41340,7 @@ $RefreshReg$(_c, "Login");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fNik9":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$be9b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$be9b.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _useOnline = require("../utils/useOnline");
-var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
-var _offline = require("./Offline");
-var _offlineDefault = parcelHelpers.interopDefault(_offline);
-var _s = $RefreshSig$();
-const Profile = ()=>{
-    _s();
-    const onlinecheck = (0, _useOnlineDefault.default)();
-    if (!onlinecheck) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _offlineDefault.default), {}, void 0, false, {
-        fileName: "src/component/profile.js",
-        lineNumber: 9,
-        columnNumber: 7
-    }, undefined);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "profile-container",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpK6DibZ8rjt974_abGKBQgsHJos2hJkxU_g&s",
-                alt: "Profile",
-                className: "profile-picture"
-            }, void 0, false, {
-                fileName: "src/component/profile.js",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "profile-header",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "profile-name",
-                        children: "Nikhil Singh Baghel"
-                    }, void 0, false, {
-                        fileName: "src/component/profile.js",
-                        lineNumber: 20,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "profile-email",
-                        children: "Email: nbaghel392@gmail.com"
-                    }, void 0, false, {
-                        fileName: "src/component/profile.js",
-                        lineNumber: 21,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/component/profile.js",
-                lineNumber: 19,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "profile-content",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        children: "InstaMart Order "
-                    }, void 0, false, {
-                        fileName: "src/component/profile.js",
-                        lineNumber: 24,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: "No order yet...."
-                    }, void 0, false, {
-                        fileName: "src/component/profile.js",
-                        lineNumber: 25,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        children: "Order Details"
-                    }, void 0, false, {
-                        fileName: "src/component/profile.js",
-                        lineNumber: 27,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: "There have No Previous Order ...."
-                    }, void 0, false, {
-                        fileName: "src/component/profile.js",
-                        lineNumber: 28,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/component/profile.js",
-                lineNumber: 23,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/component/profile.js",
-        lineNumber: 13,
-        columnNumber: 5
-    }, undefined);
-};
-_s(Profile, "Is0t0fGXQsOraVV0qqE3wSfCtzU=", false, function() {
-    return [
-        (0, _useOnlineDefault.default)
-    ];
-});
-_c = Profile;
-exports.default = Profile;
-var _c;
-$RefreshReg$(_c, "Profile");
-
-  $parcel$ReactRefreshHelpers$be9b.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../utils/useOnline":"74Yls","./Offline":"iYEaz"}],"c3CkU":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"c3CkU":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$9378 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41911,7 +41904,7 @@ const About1 = ()=>{
         className: "accordion-container",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Organization Name : Nick App"
+                children: "Organization Name : Alphawizz"
             }, void 0, false, {
                 fileName: "src/component/About.js",
                 lineNumber: 18,
@@ -42155,7 +42148,7 @@ const UserCoordinates = ()=>{
                 columnNumber: 23
             }, undefined),
             coordinates.lat && coordinates.lng ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _api.LoadScript), {
-                googleMapsApiKey: "google api key",
+                googleMapsApiKey: "AIzaSyDhIS5oQM6_haO0M-FXZgJNgzwVRCYLqeY",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _api.GoogleMap), {
                     mapContainerStyle: {
                         height: '400px',
@@ -51604,6 +51597,1468 @@ module.exports = require("8ec95fe0679d101a")(require("609229d66c072aa7").getBund
     throw err;
 }).then(()=>module.bundle.root('9g4t0'));
 
-},{"8ec95fe0679d101a":"61B45","609229d66c072aa7":"lgJ39"}]},["aQL8O","cLDdI","bNKaB"], "bNKaB", "parcelRequire94c2")
+},{"8ec95fe0679d101a":"61B45","609229d66c072aa7":"lgJ39"}],"cDiBL":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$4da2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4da2.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _useOnline = require("../utils/useOnline");
+var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
+var _offline = require("./Offline");
+var _offlineDefault = parcelHelpers.interopDefault(_offline);
+var _s = $RefreshSig$();
+const Fitness = ()=>{
+    _s();
+    const onlinecheck = (0, _useOnlineDefault.default)();
+    if (!onlinecheck) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _offlineDefault.default), {}, void 0, false, {
+        fileName: "src/component/Fitness.js",
+        lineNumber: 9,
+        columnNumber: 7
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: " fitness equipment "
+    }, void 0, false, {
+        fileName: "src/component/Fitness.js",
+        lineNumber: 13,
+        columnNumber: 4
+    }, undefined);
+};
+_s(Fitness, "Is0t0fGXQsOraVV0qqE3wSfCtzU=", false, function() {
+    return [
+        (0, _useOnlineDefault.default)
+    ];
+});
+_c = Fitness;
+exports.default = Fitness;
+var _c;
+$RefreshReg$(_c, "Fitness");
+
+  $parcel$ReactRefreshHelpers$4da2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/useOnline":"74Yls","./Offline":"iYEaz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"d6pKb":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$1d79 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1d79.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactMultiCarousel = require("react-multi-carousel");
+var _reactMultiCarouselDefault = parcelHelpers.interopDefault(_reactMultiCarousel);
+var _stylesCss = require("react-multi-carousel/lib/styles.css");
+var _trending = require("./Trending");
+var _trendingDefault = parcelHelpers.interopDefault(_trending);
+const responsive = {
+    superLargeDesktop: {
+        breakpoint: {
+            max: 4000,
+            min: 3000
+        },
+        items: 5
+    },
+    desktop: {
+        breakpoint: {
+            max: 3000,
+            min: 1024
+        },
+        items: 3
+    },
+    tablet: {
+        breakpoint: {
+            max: 1024,
+            min: 464
+        },
+        items: 2
+    },
+    mobile: {
+        breakpoint: {
+            max: 464,
+            min: 0
+        },
+        items: 1
+    }
+};
+const Carousal = ()=>{
+    // Example data for carousel items with links
+    const carouselItems = [
+        {
+            id: 1,
+            title: "CLOTHING",
+            link: "/clothing",
+            image: "https://t3.ftcdn.net/jpg/03/34/79/68/360_F_334796865_VVTjg49nbLgQPG6rgKDjVqSb5XUhBVsW.jpg"
+        },
+        {
+            id: 2,
+            title: "RESTAURANT",
+            link: "/restaurant",
+            image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D"
+        },
+        {
+            id: 3,
+            title: " GROCERY",
+            link: "/instamart",
+            image: "https://alphasilver.productsalphawizz.com/uploads/media/2024/Grocery_Gourmet_Food1.jpeg"
+        },
+        {
+            id: 4,
+            title: " FITNESS",
+            link: "/fitness",
+            image: "https://alphasilver.productsalphawizz.com/uploads/media/2024/Fitness.jpeg"
+        },
+        {
+            id: 5,
+            title: " DINEOUT",
+            link: "/dineout",
+            image: "https://www.dineout.co.in/blog/wp-content/uploads/2019/11/rsz_101.jpg"
+        },
+        {
+            id: 6,
+            title: "BEAUTY",
+            link: "/beauty",
+            image: "https://alphasilver.productsalphawizz.com/uploads/media/2024/Beauty_Personal_Care_.jpg"
+        },
+        {
+            id: 7,
+            title: "HOME&KITCHEN",
+            link: "/homekitchen",
+            image: "https://alphasilver.productsalphawizz.com/uploads/media/2024/Home_Kitchen.jpeg"
+        },
+        {
+            id: 8,
+            title: "STATIONARY",
+            link: "/stationary",
+            image: "https://alphasilver.productsalphawizz.com/uploads/media/2024/Stationery_.jpeg"
+        },
+        {
+            id: 9,
+            title: "ELECTRONICS",
+            link: "/electronics",
+            image: "https://alphasilver.productsalphawizz.com/uploads/media/2024/Electronicss1.jpeg"
+        },
+        {
+            id: 10,
+            title: "BOOKS",
+            link: "/books",
+            image: "https://alphasilver.productsalphawizz.com/uploads/media/2024/Books.jpeg"
+        },
+        {
+            id: 10,
+            title: "TOYS",
+            link: "/toys",
+            image: "https://alphasilver.productsalphawizz.com/uploads/media/2024/_Toys_Games.jpeg"
+        },
+        {
+            id: 10,
+            title: "MOBILES",
+            link: "/mobiles",
+            image: "https://images.samsung.com/is/image/samsung/assets/in/explore/brand/5-best-android-mobile-phones-2022-in-india/banner-mobile-720x761-080422.jpg?$720_N_JPG$"
+        }
+    ];
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "main",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "image-container",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "image",
+                            alt: "image",
+                            src: "https://alphasilver.productsalphawizz.com/uploads/media/2024/7mdfskoasdhgoihgio047805.png"
+                        }, void 0, false, {
+                            fileName: "src/component/carousal.js",
+                            lineNumber: 117,
+                            columnNumber: 9
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/component/carousal.js",
+                        lineNumber: 116,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "carousal",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                children: "Categories"
+                            }, void 0, false, {
+                                fileName: "src/component/carousal.js",
+                                lineNumber: 125,
+                                columnNumber: 9
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactMultiCarouselDefault.default), {
+                                responsive: responsive,
+                                children: carouselItems.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        href: item.link,
+                                        style: {
+                                            textDecoration: "none",
+                                            color: "inherit"
+                                        },
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "item",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                    src: item.image,
+                                                    alt: item.title,
+                                                    className: "carousel-image"
+                                                }, void 0, false, {
+                                                    fileName: "src/component/carousal.js",
+                                                    lineNumber: 134,
+                                                    columnNumber: 17
+                                                }, undefined),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    className: "carousel-title",
+                                                    children: item.title
+                                                }, void 0, false, {
+                                                    fileName: "src/component/carousal.js",
+                                                    lineNumber: 139,
+                                                    columnNumber: 17
+                                                }, undefined)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/component/carousal.js",
+                                            lineNumber: 133,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    }, item.id, false, {
+                                        fileName: "src/component/carousal.js",
+                                        lineNumber: 128,
+                                        columnNumber: 13
+                                    }, undefined))
+                            }, void 0, false, {
+                                fileName: "src/component/carousal.js",
+                                lineNumber: 126,
+                                columnNumber: 9
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/component/carousal.js",
+                        lineNumber: 124,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/component/carousal.js",
+                lineNumber: 115,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "trending",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _trendingDefault.default), {}, void 0, false, {
+                    fileName: "src/component/carousal.js",
+                    lineNumber: 147,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/component/carousal.js",
+                lineNumber: 146,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_c = Carousal;
+exports.default = Carousal;
+var _c;
+$RefreshReg$(_c, "Carousal");
+
+  $parcel$ReactRefreshHelpers$1d79.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-multi-carousel":"7GYri","react-multi-carousel/lib/styles.css":"kzF8x","./Trending":"5Qdva"}],"7GYri":[function(require,module,exports,__globalThis) {
+module.exports = require("422b18f349da682b");
+
+},{"422b18f349da682b":"arZXM"}],"arZXM":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var Carousel_1 = require("fbdb9dc6cb42d15a");
+exports.default = Carousel_1.default;
+
+},{"fbdb9dc6cb42d15a":"7Fnhb"}],"7Fnhb":[function(require,module,exports,__globalThis) {
+"use strict";
+var __extends = this && this.__extends || function() {
+    var extendStatics = function(d, b) {
+        return (extendStatics = Object.setPrototypeOf || ({
+            __proto__: []
+        }) instanceof Array && function(d, b) {
+            d.__proto__ = b;
+        } || function(d, b) {
+            for(var p in b)b.hasOwnProperty(p) && (d[p] = b[p]);
+        })(d, b);
+    };
+    return function(d, b) {
+        function __() {
+            this.constructor = d;
+        }
+        extendStatics(d, b), d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __);
+    };
+}();
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var React = require("4d366b70f83ac5d5"), utils_1 = require("f130f92f8c420c37"), types_1 = require("a47e479be2180a87"), Dots_1 = require("1cf0709c2b908d23"), Arrows_1 = require("6e4c8377e348cf14"), CarouselItems_1 = require("ba12243aefcb7ff0"), common_1 = require("458792e448c1b031"), defaultTransitionDuration = 400, defaultTransition = "transform 400ms ease-in-out", Carousel = function(_super) {
+    function Carousel(props) {
+        var _this = _super.call(this, props) || this;
+        return _this.containerRef = React.createRef(), _this.listRef = React.createRef(), _this.state = {
+            itemWidth: 0,
+            slidesToShow: 0,
+            currentSlide: 0,
+            totalItems: React.Children.count(props.children),
+            deviceType: "",
+            domLoaded: !1,
+            transform: 0,
+            containerWidth: 0
+        }, _this.onResize = _this.onResize.bind(_this), _this.handleDown = _this.handleDown.bind(_this), _this.handleMove = _this.handleMove.bind(_this), _this.handleOut = _this.handleOut.bind(_this), _this.onKeyUp = _this.onKeyUp.bind(_this), _this.handleEnter = _this.handleEnter.bind(_this), _this.setIsInThrottle = _this.setIsInThrottle.bind(_this), _this.next = utils_1.throttle(_this.next.bind(_this), props.transitionDuration || defaultTransitionDuration, _this.setIsInThrottle), _this.previous = utils_1.throttle(_this.previous.bind(_this), props.transitionDuration || defaultTransitionDuration, _this.setIsInThrottle), _this.goToSlide = utils_1.throttle(_this.goToSlide.bind(_this), props.transitionDuration || defaultTransitionDuration, _this.setIsInThrottle), _this.onMove = !1, _this.initialX = 0, _this.lastX = 0, _this.isAnimationAllowed = !1, _this.direction = "", _this.initialY = 0, _this.isInThrottle = !1, _this.transformPlaceHolder = 0, _this;
+    }
+    return __extends(Carousel, _super), Carousel.prototype.resetTotalItems = function() {
+        var _this = this, totalItems = React.Children.count(this.props.children), currentSlide = utils_1.notEnoughChildren(this.state) ? 0 : Math.max(0, Math.min(this.state.currentSlide, totalItems));
+        this.setState({
+            totalItems: totalItems,
+            currentSlide: currentSlide
+        }, function() {
+            _this.setContainerAndItemWidth(_this.state.slidesToShow, !0);
+        });
+    }, Carousel.prototype.setIsInThrottle = function(isInThrottle) {
+        void 0 === isInThrottle && (isInThrottle = !1), this.isInThrottle = isInThrottle;
+    }, Carousel.prototype.setTransformDirectly = function(position, withAnimation) {
+        var additionalTransfrom = this.props.additionalTransfrom;
+        this.transformPlaceHolder = position;
+        var currentTransform = common_1.getTransform(this.state, this.props, this.transformPlaceHolder);
+        this.listRef && this.listRef.current && (this.setAnimationDirectly(withAnimation), this.listRef.current.style.transform = "translate3d(" + (currentTransform + additionalTransfrom) + "px,0,0)");
+    }, Carousel.prototype.setAnimationDirectly = function(animationAllowed) {
+        this.listRef && this.listRef.current && (this.listRef.current.style.transition = animationAllowed ? this.props.customTransition || defaultTransition : "none");
+    }, Carousel.prototype.componentDidMount = function() {
+        this.setState({
+            domLoaded: !0
+        }), this.setItemsToShow(), window.addEventListener("resize", this.onResize), this.onResize(!0), this.props.keyBoardControl && window.addEventListener("keyup", this.onKeyUp), this.props.autoPlay && (this.autoPlay = setInterval(this.next, this.props.autoPlaySpeed));
+    }, Carousel.prototype.setClones = function(slidesToShow, itemWidth, forResizing, resetCurrentSlide) {
+        var _this = this;
+        void 0 === resetCurrentSlide && (resetCurrentSlide = !1), this.isAnimationAllowed = !1;
+        var childrenArr = React.Children.toArray(this.props.children), initialSlide = utils_1.getInitialSlideInInfiniteMode(slidesToShow || this.state.slidesToShow, childrenArr), clones = utils_1.getClones(this.state.slidesToShow, childrenArr), currentSlide = childrenArr.length < this.state.slidesToShow ? 0 : this.state.currentSlide;
+        this.setState({
+            totalItems: clones.length,
+            currentSlide: forResizing && !resetCurrentSlide ? currentSlide : initialSlide
+        }, function() {
+            _this.correctItemsPosition(itemWidth || _this.state.itemWidth);
+        });
+    }, Carousel.prototype.setItemsToShow = function(shouldCorrectItemPosition, resetCurrentSlide) {
+        var _this = this, responsive = this.props.responsive;
+        Object.keys(responsive).forEach(function(item) {
+            var _a = responsive[item], breakpoint = _a.breakpoint, items = _a.items, max = breakpoint.max, min = breakpoint.min, widths = [
+                window.innerWidth
+            ];
+            window.screen && window.screen.width && widths.push(window.screen.width);
+            var screenWidth = Math.min.apply(Math, widths);
+            min <= screenWidth && screenWidth <= max && (_this.setState({
+                slidesToShow: items,
+                deviceType: item
+            }), _this.setContainerAndItemWidth(items, shouldCorrectItemPosition, resetCurrentSlide));
+        });
+    }, Carousel.prototype.setContainerAndItemWidth = function(slidesToShow, shouldCorrectItemPosition, resetCurrentSlide) {
+        var _this = this;
+        if (this.containerRef && this.containerRef.current) {
+            var containerWidth = this.containerRef.current.offsetWidth, itemWidth_1 = utils_1.getItemClientSideWidth(this.props, slidesToShow, containerWidth);
+            this.setState({
+                containerWidth: containerWidth,
+                itemWidth: itemWidth_1
+            }, function() {
+                _this.props.infinite && _this.setClones(slidesToShow, itemWidth_1, shouldCorrectItemPosition, resetCurrentSlide);
+            }), shouldCorrectItemPosition && this.correctItemsPosition(itemWidth_1);
+        }
+    }, Carousel.prototype.correctItemsPosition = function(itemWidth, isAnimationAllowed, setToDomDirectly) {
+        isAnimationAllowed && (this.isAnimationAllowed = !0), !isAnimationAllowed && this.isAnimationAllowed && (this.isAnimationAllowed = !1);
+        var nextTransform = this.state.totalItems < this.state.slidesToShow ? 0 : -itemWidth * this.state.currentSlide;
+        setToDomDirectly && this.setTransformDirectly(nextTransform, !0), this.setState({
+            transform: nextTransform
+        });
+    }, Carousel.prototype.onResize = function(value) {
+        var shouldCorrectItemPosition;
+        shouldCorrectItemPosition = !!this.props.infinite && ("boolean" != typeof value || !value), this.setItemsToShow(shouldCorrectItemPosition);
+    }, Carousel.prototype.componentDidUpdate = function(_a, _b) {
+        var _this = this, keyBoardControl = _a.keyBoardControl, autoPlay = _a.autoPlay, children = _a.children, containerWidth = _b.containerWidth, domLoaded = _b.domLoaded, currentSlide = _b.currentSlide;
+        if (this.containerRef && this.containerRef.current && this.containerRef.current.offsetWidth !== containerWidth && (this.itemsToShowTimeout && clearTimeout(this.itemsToShowTimeout), this.itemsToShowTimeout = setTimeout(function() {
+            _this.setItemsToShow(!0);
+        }, this.props.transitionDuration || defaultTransitionDuration)), keyBoardControl && !this.props.keyBoardControl && window.removeEventListener("keyup", this.onKeyUp), !keyBoardControl && this.props.keyBoardControl && window.addEventListener("keyup", this.onKeyUp), autoPlay && !this.props.autoPlay && this.autoPlay && (clearInterval(this.autoPlay), this.autoPlay = void 0), autoPlay || !this.props.autoPlay || this.autoPlay || (this.autoPlay = setInterval(this.next, this.props.autoPlaySpeed)), children.length !== this.props.children.length ? Carousel.clonesTimeout = setTimeout(function() {
+            _this.props.infinite ? _this.setClones(_this.state.slidesToShow, _this.state.itemWidth, !0, !0) : _this.resetTotalItems();
+        }, this.props.transitionDuration || defaultTransitionDuration) : this.props.infinite && this.state.currentSlide !== currentSlide && this.correctClonesPosition({
+            domLoaded: domLoaded
+        }), this.transformPlaceHolder !== this.state.transform && (this.transformPlaceHolder = this.state.transform), this.props.autoPlay && this.props.rewind && !this.props.infinite && utils_1.isInRightEnd(this.state)) {
+            var rewindBuffer = this.props.transitionDuration || defaultTransitionDuration;
+            Carousel.isInThrottleTimeout = setTimeout(function() {
+                _this.setIsInThrottle(!1), _this.resetAutoplayInterval(), _this.goToSlide(0, void 0, !!_this.props.rewindWithAnimation);
+            }, rewindBuffer + this.props.autoPlaySpeed);
+        }
+    }, Carousel.prototype.correctClonesPosition = function(_a) {
+        var _this = this, domLoaded = _a.domLoaded, childrenArr = React.Children.toArray(this.props.children), _b = utils_1.checkClonesPosition(this.state, childrenArr, this.props), isReachingTheEnd = _b.isReachingTheEnd, isReachingTheStart = _b.isReachingTheStart, nextSlide = _b.nextSlide, nextPosition = _b.nextPosition;
+        this.state.domLoaded && domLoaded && (isReachingTheEnd || isReachingTheStart) && (this.isAnimationAllowed = !1, Carousel.transformTimeout = setTimeout(function() {
+            _this.setState({
+                transform: nextPosition,
+                currentSlide: nextSlide
+            });
+        }, this.props.transitionDuration || defaultTransitionDuration));
+    }, Carousel.prototype.next = function(slidesHavePassed) {
+        var _this = this;
+        void 0 === slidesHavePassed && (slidesHavePassed = 0);
+        var _a = this.props, afterChange = _a.afterChange, beforeChange = _a.beforeChange;
+        if (!utils_1.notEnoughChildren(this.state)) {
+            var _b = utils_1.populateNextSlides(this.state, this.props, slidesHavePassed), nextSlides = _b.nextSlides, nextPosition = _b.nextPosition, previousSlide = this.state.currentSlide;
+            void 0 !== nextSlides && void 0 !== nextPosition && ("function" == typeof beforeChange && beforeChange(nextSlides, this.getState()), this.isAnimationAllowed = !0, this.props.shouldResetAutoplay && this.resetAutoplayInterval(), this.setState({
+                transform: nextPosition,
+                currentSlide: nextSlides
+            }, function() {
+                "function" == typeof afterChange && (Carousel.afterChangeTimeout = setTimeout(function() {
+                    afterChange(previousSlide, _this.getState());
+                }, _this.props.transitionDuration || defaultTransitionDuration));
+            }));
+        }
+    }, Carousel.prototype.previous = function(slidesHavePassed) {
+        var _this = this;
+        void 0 === slidesHavePassed && (slidesHavePassed = 0);
+        var _a = this.props, afterChange = _a.afterChange, beforeChange = _a.beforeChange;
+        if (!utils_1.notEnoughChildren(this.state)) {
+            var _b = utils_1.populatePreviousSlides(this.state, this.props, slidesHavePassed), nextSlides = _b.nextSlides, nextPosition = _b.nextPosition;
+            if (void 0 !== nextSlides && void 0 !== nextPosition) {
+                var previousSlide = this.state.currentSlide;
+                "function" == typeof beforeChange && beforeChange(nextSlides, this.getState()), this.isAnimationAllowed = !0, this.props.shouldResetAutoplay && this.resetAutoplayInterval(), this.setState({
+                    transform: nextPosition,
+                    currentSlide: nextSlides
+                }, function() {
+                    "function" == typeof afterChange && (Carousel.afterChangeTimeout2 = setTimeout(function() {
+                        afterChange(previousSlide, _this.getState());
+                    }, _this.props.transitionDuration || defaultTransitionDuration));
+                });
+            }
+        }
+    }, Carousel.prototype.resetAutoplayInterval = function() {
+        this.props.autoPlay && (clearInterval(this.autoPlay), this.autoPlay = setInterval(this.next, this.props.autoPlaySpeed));
+    }, Carousel.prototype.componentWillUnmount = function() {
+        window.removeEventListener("resize", this.onResize), this.props.keyBoardControl && window.removeEventListener("keyup", this.onKeyUp), this.props.autoPlay && this.autoPlay && (clearInterval(this.autoPlay), this.autoPlay = void 0), this.itemsToShowTimeout && clearTimeout(this.itemsToShowTimeout), Carousel.clonesTimeout && clearTimeout(Carousel.clonesTimeout), Carousel.isInThrottleTimeout && clearTimeout(Carousel.isInThrottleTimeout), Carousel.transformTimeout && clearTimeout(Carousel.transformTimeout), Carousel.afterChangeTimeout && clearTimeout(Carousel.afterChangeTimeout), Carousel.afterChangeTimeout2 && clearTimeout(Carousel.afterChangeTimeout2), Carousel.afterChangeTimeout3 && clearTimeout(Carousel.afterChangeTimeout3);
+    }, Carousel.prototype.resetMoveStatus = function() {
+        this.onMove = !1, this.initialX = 0, this.lastX = 0, this.direction = "", this.initialY = 0;
+    }, Carousel.prototype.getCords = function(_a) {
+        var clientX = _a.clientX, clientY = _a.clientY;
+        return {
+            clientX: common_1.parsePosition(this.props, clientX),
+            clientY: common_1.parsePosition(this.props, clientY)
+        };
+    }, Carousel.prototype.handleDown = function(e) {
+        if (!(!types_1.isMouseMoveEvent(e) && !this.props.swipeable || types_1.isMouseMoveEvent(e) && !this.props.draggable || this.isInThrottle)) {
+            var _a = this.getCords(types_1.isMouseMoveEvent(e) ? e : e.touches[0]), clientX = _a.clientX, clientY = _a.clientY;
+            this.onMove = !0, this.initialX = clientX, this.initialY = clientY, this.lastX = clientX, this.isAnimationAllowed = !1;
+        }
+    }, Carousel.prototype.handleMove = function(e) {
+        if (!(!types_1.isMouseMoveEvent(e) && !this.props.swipeable || types_1.isMouseMoveEvent(e) && !this.props.draggable || utils_1.notEnoughChildren(this.state))) {
+            var _a = this.getCords(types_1.isMouseMoveEvent(e) ? e : e.touches[0]), clientX = _a.clientX, clientY = _a.clientY, diffX = this.initialX - clientX, diffY = this.initialY - clientY;
+            if (this.onMove) {
+                if (!(Math.abs(diffX) > Math.abs(diffY))) return;
+                var _b = utils_1.populateSlidesOnMouseTouchMove(this.state, this.props, this.initialX, this.lastX, clientX, this.transformPlaceHolder), direction = _b.direction, nextPosition = _b.nextPosition, canContinue = _b.canContinue;
+                direction && (this.direction = direction, canContinue && void 0 !== nextPosition && this.setTransformDirectly(nextPosition)), this.lastX = clientX;
+            }
+        }
+    }, Carousel.prototype.handleOut = function(e) {
+        this.props.autoPlay && !this.autoPlay && (this.autoPlay = setInterval(this.next, this.props.autoPlaySpeed));
+        var shouldDisableOnMobile = "touchend" === e.type && !this.props.swipeable, shouldDisableOnDesktop = ("mouseleave" === e.type || "mouseup" === e.type) && !this.props.draggable;
+        if (!shouldDisableOnMobile && !shouldDisableOnDesktop && this.onMove) {
+            if (this.setAnimationDirectly(!0), "right" === this.direction) {
+                if (this.initialX - this.lastX >= this.props.minimumTouchDrag) {
+                    var slidesHavePassed = Math.round((this.initialX - this.lastX) / this.state.itemWidth);
+                    this.next(slidesHavePassed);
+                } else this.correctItemsPosition(this.state.itemWidth, !0, !0);
+            }
+            if ("left" === this.direction) {
+                if (this.lastX - this.initialX > this.props.minimumTouchDrag) {
+                    slidesHavePassed = Math.round((this.lastX - this.initialX) / this.state.itemWidth);
+                    this.previous(slidesHavePassed);
+                } else this.correctItemsPosition(this.state.itemWidth, !0, !0);
+            }
+            this.resetMoveStatus();
+        }
+    }, Carousel.prototype.isInViewport = function(el) {
+        var _a = el.getBoundingClientRect(), _b = _a.top, top = void 0 === _b ? 0 : _b, _c = _a.left, left = void 0 === _c ? 0 : _c, _d = _a.bottom, bottom = void 0 === _d ? 0 : _d, _e = _a.right, right = void 0 === _e ? 0 : _e;
+        return 0 <= top && 0 <= left && bottom <= (window.innerHeight || document.documentElement.clientHeight) && right <= (window.innerWidth || document.documentElement.clientWidth);
+    }, Carousel.prototype.isChildOfCarousel = function(el) {
+        return !!(el instanceof Element && this.listRef && this.listRef.current) && this.listRef.current.contains(el);
+    }, Carousel.prototype.onKeyUp = function(e) {
+        var target = e.target;
+        switch(e.keyCode){
+            case 37:
+                if (this.isChildOfCarousel(target)) return this.previous();
+                break;
+            case 39:
+                if (this.isChildOfCarousel(target)) return this.next();
+                break;
+            case 9:
+                if (this.isChildOfCarousel(target) && target instanceof HTMLInputElement && this.isInViewport(target)) return this.next();
+        }
+    }, Carousel.prototype.handleEnter = function(e) {
+        types_1.isMouseMoveEvent(e) && this.autoPlay && this.props.autoPlay && this.props.pauseOnHover && (clearInterval(this.autoPlay), this.autoPlay = void 0);
+    }, Carousel.prototype.goToSlide = function(slide, skipCallbacks, animationAllowed) {
+        var _this = this;
+        if (void 0 === animationAllowed && (animationAllowed = !0), !this.isInThrottle) {
+            var itemWidth = this.state.itemWidth, _a = this.props, afterChange = _a.afterChange, beforeChange = _a.beforeChange, previousSlide = this.state.currentSlide;
+            "function" != typeof beforeChange || skipCallbacks && ("object" != typeof skipCallbacks || skipCallbacks.skipBeforeChange) || beforeChange(slide, this.getState()), this.isAnimationAllowed = animationAllowed, this.props.shouldResetAutoplay && this.resetAutoplayInterval(), this.setState({
+                currentSlide: slide,
+                transform: -itemWidth * slide
+            }, function() {
+                _this.props.infinite && _this.correctClonesPosition({
+                    domLoaded: !0
+                }), "function" != typeof afterChange || skipCallbacks && ("object" != typeof skipCallbacks || skipCallbacks.skipAfterChange) || (Carousel.afterChangeTimeout3 = setTimeout(function() {
+                    afterChange(previousSlide, _this.getState());
+                }, _this.props.transitionDuration || defaultTransitionDuration));
+            });
+        }
+    }, Carousel.prototype.getState = function() {
+        return this.state;
+    }, Carousel.prototype.renderLeftArrow = function(disbaled) {
+        var _this = this, _a = this.props, customLeftArrow = _a.customLeftArrow, rtl = _a.rtl;
+        return React.createElement(Arrows_1.LeftArrow, {
+            customLeftArrow: customLeftArrow,
+            getState: function() {
+                return _this.getState();
+            },
+            previous: this.previous,
+            disabled: disbaled,
+            rtl: rtl
+        });
+    }, Carousel.prototype.renderRightArrow = function(disbaled) {
+        var _this = this, _a = this.props, customRightArrow = _a.customRightArrow, rtl = _a.rtl;
+        return React.createElement(Arrows_1.RightArrow, {
+            customRightArrow: customRightArrow,
+            getState: function() {
+                return _this.getState();
+            },
+            next: this.next,
+            disabled: disbaled,
+            rtl: rtl
+        });
+    }, Carousel.prototype.renderButtonGroups = function() {
+        var _this = this, customButtonGroup = this.props.customButtonGroup;
+        return customButtonGroup ? React.cloneElement(customButtonGroup, {
+            previous: function() {
+                return _this.previous();
+            },
+            next: function() {
+                return _this.next();
+            },
+            goToSlide: function(slideIndex, skipCallbacks) {
+                return _this.goToSlide(slideIndex, skipCallbacks);
+            },
+            carouselState: this.getState()
+        }) : null;
+    }, Carousel.prototype.renderDotsList = function() {
+        var _this = this;
+        return React.createElement(Dots_1.default, {
+            state: this.state,
+            props: this.props,
+            goToSlide: this.goToSlide,
+            getState: function() {
+                return _this.getState();
+            }
+        });
+    }, Carousel.prototype.renderCarouselItems = function() {
+        var clones = [];
+        if (this.props.infinite) {
+            var childrenArr = React.Children.toArray(this.props.children);
+            clones = utils_1.getClones(this.state.slidesToShow, childrenArr);
+        }
+        return React.createElement(CarouselItems_1.default, {
+            clones: clones,
+            goToSlide: this.goToSlide,
+            state: this.state,
+            notEnoughChildren: utils_1.notEnoughChildren(this.state),
+            props: this.props
+        });
+    }, Carousel.prototype.render = function() {
+        var _a = this.props, deviceType = _a.deviceType, arrows = _a.arrows, renderArrowsWhenDisabled = _a.renderArrowsWhenDisabled, removeArrowOnDeviceType = _a.removeArrowOnDeviceType, infinite = _a.infinite, containerClass = _a.containerClass, sliderClass = _a.sliderClass, customTransition = _a.customTransition, additionalTransfrom = _a.additionalTransfrom, renderDotsOutside = _a.renderDotsOutside, renderButtonGroupOutside = _a.renderButtonGroupOutside, className = _a.className, rtl = _a.rtl;
+        utils_1.throwError(this.state, this.props);
+        var _b = utils_1.getInitialState(this.state, this.props), shouldRenderOnSSR = _b.shouldRenderOnSSR, shouldRenderAtAll = _b.shouldRenderAtAll, isLeftEndReach = utils_1.isInLeftEnd(this.state), isRightEndReach = utils_1.isInRightEnd(this.state), shouldShowArrows = arrows && !(removeArrowOnDeviceType && (deviceType && -1 < removeArrowOnDeviceType.indexOf(deviceType) || this.state.deviceType && -1 < removeArrowOnDeviceType.indexOf(this.state.deviceType))) && !utils_1.notEnoughChildren(this.state) && shouldRenderAtAll, disableLeftArrow = !infinite && isLeftEndReach, disableRightArrow = !infinite && isRightEndReach, currentTransform = common_1.getTransform(this.state, this.props);
+        return React.createElement(React.Fragment, null, React.createElement("div", {
+            className: "react-multi-carousel-list " + containerClass + " " + className,
+            dir: rtl ? "rtl" : "ltr",
+            ref: this.containerRef
+        }, React.createElement("ul", {
+            ref: this.listRef,
+            className: "react-multi-carousel-track " + sliderClass,
+            style: {
+                transition: this.isAnimationAllowed ? customTransition || defaultTransition : "none",
+                overflow: shouldRenderOnSSR ? "hidden" : "unset",
+                transform: "translate3d(" + (currentTransform + additionalTransfrom) + "px,0,0)"
+            },
+            onMouseMove: this.handleMove,
+            onMouseDown: this.handleDown,
+            onMouseUp: this.handleOut,
+            onMouseEnter: this.handleEnter,
+            onMouseLeave: this.handleOut,
+            onTouchStart: this.handleDown,
+            onTouchMove: this.handleMove,
+            onTouchEnd: this.handleOut
+        }, this.renderCarouselItems()), shouldShowArrows && (!disableLeftArrow || renderArrowsWhenDisabled) && this.renderLeftArrow(disableLeftArrow), shouldShowArrows && (!disableRightArrow || renderArrowsWhenDisabled) && this.renderRightArrow(disableRightArrow), shouldRenderAtAll && !renderButtonGroupOutside && this.renderButtonGroups(), shouldRenderAtAll && !renderDotsOutside && this.renderDotsList()), shouldRenderAtAll && renderDotsOutside && this.renderDotsList(), shouldRenderAtAll && renderButtonGroupOutside && this.renderButtonGroups());
+    }, Carousel.defaultProps = {
+        slidesToSlide: 1,
+        infinite: !1,
+        draggable: !0,
+        swipeable: !0,
+        arrows: !0,
+        renderArrowsWhenDisabled: !1,
+        containerClass: "",
+        sliderClass: "",
+        itemClass: "",
+        keyBoardControl: !0,
+        autoPlaySpeed: 3e3,
+        showDots: !1,
+        renderDotsOutside: !1,
+        renderButtonGroupOutside: !1,
+        minimumTouchDrag: 80,
+        className: "",
+        dotListClass: "",
+        focusOnSelect: !1,
+        centerMode: !1,
+        additionalTransfrom: 0,
+        pauseOnHover: !0,
+        shouldResetAutoplay: !0,
+        rewind: !1,
+        rtl: !1,
+        rewindWithAnimation: !1
+    }, Carousel;
+}(React.Component);
+exports.default = Carousel;
+
+},{"4d366b70f83ac5d5":"21dqq","f130f92f8c420c37":"9Pb3a","a47e479be2180a87":"eSnYr","1cf0709c2b908d23":"eteDK","6e4c8377e348cf14":"kdfHd","ba12243aefcb7ff0":"8nm32","458792e448c1b031":"imys0"}],"9Pb3a":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var clones_1 = require("a757853e4832be6b");
+exports.getOriginalCounterPart = clones_1.getOriginalCounterPart, exports.getClones = clones_1.getClones, exports.checkClonesPosition = clones_1.checkClonesPosition, exports.getInitialSlideInInfiniteMode = clones_1.getInitialSlideInInfiniteMode;
+var elementWidth_1 = require("fa90cdefe53152f4");
+exports.getWidthFromDeviceType = elementWidth_1.getWidthFromDeviceType, exports.getPartialVisibilityGutter = elementWidth_1.getPartialVisibilityGutter, exports.getItemClientSideWidth = elementWidth_1.getItemClientSideWidth;
+var common_1 = require("f241ee75935f103c");
+exports.getInitialState = common_1.getInitialState, exports.getIfSlideIsVisbile = common_1.getIfSlideIsVisbile, exports.getTransformForCenterMode = common_1.getTransformForCenterMode, exports.getTransformForPartialVsibile = common_1.getTransformForPartialVsibile, exports.isInLeftEnd = common_1.isInLeftEnd, exports.isInRightEnd = common_1.isInRightEnd, exports.notEnoughChildren = common_1.notEnoughChildren, exports.getSlidesToSlide = common_1.getSlidesToSlide;
+var throttle_1 = require("23da0d1a0d961c4");
+exports.throttle = throttle_1.default;
+var throwError_1 = require("4fe3267a4edf007d");
+exports.throwError = throwError_1.default;
+var next_1 = require("ff8604f2d2e2f57f");
+exports.populateNextSlides = next_1.populateNextSlides;
+var previous_1 = require("aff06300ca5c0832");
+exports.populatePreviousSlides = previous_1.populatePreviousSlides;
+var mouseOrTouchMove_1 = require("5eeffae371d9294d");
+exports.populateSlidesOnMouseTouchMove = mouseOrTouchMove_1.populateSlidesOnMouseTouchMove;
+
+},{"a757853e4832be6b":"5iWMG","fa90cdefe53152f4":"62aOQ","f241ee75935f103c":"imys0","23da0d1a0d961c4":"cfzs7","4fe3267a4edf007d":"hxj9q","ff8604f2d2e2f57f":"2NGjP","aff06300ca5c0832":"dudDt","5eeffae371d9294d":"G455a"}],"5iWMG":[function(require,module,exports,__globalThis) {
+"use strict";
+function getOriginalCounterPart(index, _a, childrenArr) {
+    var slidesToShow = _a.slidesToShow, currentSlide = _a.currentSlide;
+    return childrenArr.length > 2 * slidesToShow ? index + 2 * slidesToShow : currentSlide >= childrenArr.length ? childrenArr.length + index : index;
+}
+function getOriginalIndexLookupTableByClones(slidesToShow, childrenArr) {
+    if (childrenArr.length > 2 * slidesToShow) {
+        for(var table = {}, firstBeginningOfClones = childrenArr.length - 2 * slidesToShow, firstEndOfClones = childrenArr.length - firstBeginningOfClones, firstCount = firstBeginningOfClones, i = 0; i < firstEndOfClones; i++)table[i] = firstCount, firstCount++;
+        var secondBeginningOfClones = childrenArr.length + firstEndOfClones, secondEndOfClones = secondBeginningOfClones + childrenArr.slice(0, 2 * slidesToShow).length, secondCount = 0;
+        for(i = secondBeginningOfClones; i <= secondEndOfClones; i++)table[i] = secondCount, secondCount++;
+        var originalEnd = secondBeginningOfClones, originalCounter = 0;
+        for(i = firstEndOfClones; i < originalEnd; i++)table[i] = originalCounter, originalCounter++;
+        return table;
+    }
+    table = {};
+    var totalSlides = 3 * childrenArr.length, count = 0;
+    for(i = 0; i < totalSlides; i++)table[i] = count, ++count === childrenArr.length && (count = 0);
+    return table;
+}
+function getClones(slidesToShow, childrenArr) {
+    return childrenArr.length < slidesToShow ? childrenArr : childrenArr.length > 2 * slidesToShow ? childrenArr.slice(childrenArr.length - 2 * slidesToShow, childrenArr.length).concat(childrenArr, childrenArr.slice(0, 2 * slidesToShow)) : childrenArr.concat(childrenArr, childrenArr);
+}
+function getInitialSlideInInfiniteMode(slidesToShow, childrenArr) {
+    return childrenArr.length > 2 * slidesToShow ? 2 * slidesToShow : childrenArr.length;
+}
+function checkClonesPosition(_a, childrenArr, props) {
+    var isReachingTheEnd, currentSlide = _a.currentSlide, slidesToShow = _a.slidesToShow, itemWidth = _a.itemWidth, totalItems = _a.totalItems, nextSlide = 0, nextPosition = 0, isReachingTheStart = 0 === currentSlide, originalFirstSlide = childrenArr.length - (childrenArr.length - 2 * slidesToShow);
+    return childrenArr.length < slidesToShow ? (nextPosition = nextSlide = 0, isReachingTheStart = isReachingTheEnd = !1) : childrenArr.length > 2 * slidesToShow ? ((isReachingTheEnd = currentSlide >= originalFirstSlide + childrenArr.length) && (nextPosition = -itemWidth * (nextSlide = currentSlide - childrenArr.length)), isReachingTheStart && (nextPosition = -itemWidth * (nextSlide = originalFirstSlide + (childrenArr.length - 2 * slidesToShow)))) : ((isReachingTheEnd = currentSlide >= 2 * childrenArr.length) && (nextPosition = -itemWidth * (nextSlide = currentSlide - childrenArr.length)), isReachingTheStart && (nextPosition = props.showDots ? -itemWidth * (nextSlide = childrenArr.length) : -itemWidth * (nextSlide = totalItems / 3))), {
+        isReachingTheEnd: isReachingTheEnd,
+        isReachingTheStart: isReachingTheStart,
+        nextSlide: nextSlide,
+        nextPosition: nextPosition
+    };
+}
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+}), exports.getOriginalCounterPart = getOriginalCounterPart, exports.getOriginalIndexLookupTableByClones = getOriginalIndexLookupTableByClones, exports.getClones = getClones, exports.getInitialSlideInInfiniteMode = getInitialSlideInInfiniteMode, exports.checkClonesPosition = checkClonesPosition;
+
+},{}],"62aOQ":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var hasWarnAboutTypo = !1;
+function getPartialVisibilityGutter(responsive, partialVisible, serverSideDeviceType, clientSideDeviceType) {
+    var gutter = 0, deviceType = clientSideDeviceType || serverSideDeviceType;
+    return partialVisible && deviceType && (!hasWarnAboutTypo && true && responsive[deviceType].paritialVisibilityGutter && (hasWarnAboutTypo = !0, console.warn("You appear to be using paritialVisibilityGutter instead of partialVisibilityGutter which will be moved to partialVisibilityGutter in the future completely")), gutter = responsive[deviceType].partialVisibilityGutter || responsive[deviceType].paritialVisibilityGutter), gutter;
+}
+function getWidthFromDeviceType(deviceType, responsive) {
+    var itemWidth;
+    responsive[deviceType] && (itemWidth = (100 / responsive[deviceType].items).toFixed(1));
+    return itemWidth;
+}
+function getItemClientSideWidth(props, slidesToShow, containerWidth) {
+    return Math.round(containerWidth / (slidesToShow + (props.centerMode ? 1 : 0)));
+}
+exports.getPartialVisibilityGutter = getPartialVisibilityGutter, exports.getWidthFromDeviceType = getWidthFromDeviceType, exports.getItemClientSideWidth = getItemClientSideWidth;
+
+},{}],"imys0":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var elementWidth_1 = require("882452b35884c786");
+function notEnoughChildren(state) {
+    var slidesToShow = state.slidesToShow;
+    return state.totalItems < slidesToShow;
+}
+function getInitialState(state, props) {
+    var flexBisis, domLoaded = state.domLoaded, slidesToShow = state.slidesToShow, containerWidth = state.containerWidth, itemWidth = state.itemWidth, deviceType = props.deviceType, responsive = props.responsive, ssr = props.ssr, partialVisbile = props.partialVisbile, partialVisible = props.partialVisible, domFullyLoaded = Boolean(domLoaded && slidesToShow && containerWidth && itemWidth);
+    ssr && deviceType && !domFullyLoaded && (flexBisis = elementWidth_1.getWidthFromDeviceType(deviceType, responsive));
+    var shouldRenderOnSSR = Boolean(ssr && deviceType && !domFullyLoaded && flexBisis);
+    return {
+        shouldRenderOnSSR: shouldRenderOnSSR,
+        flexBisis: flexBisis,
+        domFullyLoaded: domFullyLoaded,
+        partialVisibilityGutter: elementWidth_1.getPartialVisibilityGutter(responsive, partialVisbile || partialVisible, deviceType, state.deviceType),
+        shouldRenderAtAll: shouldRenderOnSSR || domFullyLoaded
+    };
+}
+function getIfSlideIsVisbile(index, state) {
+    var currentSlide = state.currentSlide, slidesToShow = state.slidesToShow;
+    return currentSlide <= index && index < currentSlide + slidesToShow;
+}
+function getTransformForCenterMode(state, props, transformPlaceHolder) {
+    var transform = transformPlaceHolder || state.transform;
+    return !props.infinite && 0 === state.currentSlide || notEnoughChildren(state) ? transform : transform + state.itemWidth / 2;
+}
+function isInLeftEnd(_a) {
+    return !(0 < _a.currentSlide);
+}
+function isInRightEnd(_a) {
+    var currentSlide = _a.currentSlide, totalItems = _a.totalItems;
+    return !(currentSlide + _a.slidesToShow < totalItems);
+}
+function getTransformForPartialVsibile(state, partialVisibilityGutter, props, transformPlaceHolder) {
+    void 0 === partialVisibilityGutter && (partialVisibilityGutter = 0);
+    var currentSlide = state.currentSlide, slidesToShow = state.slidesToShow, isRightEndReach = isInRightEnd(state), shouldRemoveRightGutter = !props.infinite && isRightEndReach, baseTransform = transformPlaceHolder || state.transform;
+    if (notEnoughChildren(state)) return baseTransform;
+    var transform = baseTransform + currentSlide * partialVisibilityGutter;
+    return shouldRemoveRightGutter ? transform + (state.containerWidth - (state.itemWidth - partialVisibilityGutter) * slidesToShow) : transform;
+}
+function parsePosition(props, position) {
+    return props.rtl ? -1 * position : position;
+}
+function getTransform(state, props, transformPlaceHolder) {
+    var partialVisbile = props.partialVisbile, partialVisible = props.partialVisible, responsive = props.responsive, deviceType = props.deviceType, centerMode = props.centerMode, transform = transformPlaceHolder || state.transform, partialVisibilityGutter = elementWidth_1.getPartialVisibilityGutter(responsive, partialVisbile || partialVisible, deviceType, state.deviceType);
+    return parsePosition(props, partialVisible || partialVisbile ? getTransformForPartialVsibile(state, partialVisibilityGutter, props, transformPlaceHolder) : centerMode ? getTransformForCenterMode(state, props, transformPlaceHolder) : transform);
+}
+function getSlidesToSlide(state, props) {
+    var domLoaded = state.domLoaded, slidesToShow = state.slidesToShow, containerWidth = state.containerWidth, itemWidth = state.itemWidth, deviceType = props.deviceType, responsive = props.responsive, slidesToScroll = props.slidesToSlide || 1, domFullyLoaded = Boolean(domLoaded && slidesToShow && containerWidth && itemWidth);
+    return props.ssr && props.deviceType && !domFullyLoaded && Object.keys(responsive).forEach(function(device) {
+        var slidesToSlide = responsive[device].slidesToSlide;
+        deviceType === device && slidesToSlide && (slidesToScroll = slidesToSlide);
+    }), domFullyLoaded && Object.keys(responsive).forEach(function(item) {
+        var _a = responsive[item], breakpoint = _a.breakpoint, slidesToSlide = _a.slidesToSlide, max = breakpoint.max, min = breakpoint.min;
+        slidesToSlide && window.innerWidth >= min && window.innerWidth <= max && (slidesToScroll = slidesToSlide);
+    }), slidesToScroll;
+}
+exports.notEnoughChildren = notEnoughChildren, exports.getInitialState = getInitialState, exports.getIfSlideIsVisbile = getIfSlideIsVisbile, exports.getTransformForCenterMode = getTransformForCenterMode, exports.isInLeftEnd = isInLeftEnd, exports.isInRightEnd = isInRightEnd, exports.getTransformForPartialVsibile = getTransformForPartialVsibile, exports.parsePosition = parsePosition, exports.getTransform = getTransform, exports.getSlidesToSlide = getSlidesToSlide;
+
+},{"882452b35884c786":"62aOQ"}],"cfzs7":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var throttle = function(func, limit, setIsInThrottle) {
+    var inThrottle;
+    return function() {
+        var args = arguments;
+        inThrottle || (func.apply(this, args), inThrottle = !0, "function" == typeof setIsInThrottle && setIsInThrottle(!0), setTimeout(function() {
+            inThrottle = !1, "function" == typeof setIsInThrottle && setIsInThrottle(!1);
+        }, limit));
+    };
+};
+exports.default = throttle;
+
+},{}],"hxj9q":[function(require,module,exports,__globalThis) {
+"use strict";
+function throwError(state, props) {
+    var partialVisbile = props.partialVisbile, partialVisible = props.partialVisible, centerMode = props.centerMode, ssr = props.ssr, responsive = props.responsive;
+    if ((partialVisbile || partialVisible) && centerMode) throw new Error("center mode can not be used at the same time with partialVisible");
+    if (!responsive) throw ssr ? new Error("ssr mode need to be used in conjunction with responsive prop") : new Error("Responsive prop is needed for deciding the amount of items to show on the screen");
+    if (responsive && "object" != typeof responsive) throw new Error("responsive prop must be an object");
+}
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+}), exports.default = throwError;
+
+},{}],"2NGjP":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var common_1 = require("718150d3943a47f2");
+function populateNextSlides(state, props, slidesHavePassed) {
+    void 0 === slidesHavePassed && (slidesHavePassed = 0);
+    var nextSlides, nextPosition, slidesToShow = state.slidesToShow, currentSlide = state.currentSlide, itemWidth = state.itemWidth, totalItems = state.totalItems, slidesToSlide = common_1.getSlidesToSlide(state, props), nextMaximumSlides = currentSlide + 1 + slidesHavePassed + slidesToShow + (0 < slidesHavePassed ? 0 : slidesToSlide);
+    return nextPosition = nextMaximumSlides <= totalItems ? -itemWidth * (nextSlides = currentSlide + slidesHavePassed + (0 < slidesHavePassed ? 0 : slidesToSlide)) : totalItems < nextMaximumSlides && currentSlide !== totalItems - slidesToShow ? -itemWidth * (nextSlides = totalItems - slidesToShow) : nextSlides = void 0, {
+        nextSlides: nextSlides,
+        nextPosition: nextPosition
+    };
+}
+exports.populateNextSlides = populateNextSlides;
+
+},{"718150d3943a47f2":"imys0"}],"dudDt":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var React = require("e638ee0fe3918325"), common_1 = require("7caeea1b5023cc0f"), common_2 = require("7caeea1b5023cc0f");
+function populatePreviousSlides(state, props, slidesHavePassed) {
+    void 0 === slidesHavePassed && (slidesHavePassed = 0);
+    var nextSlides, nextPosition, currentSlide = state.currentSlide, itemWidth = state.itemWidth, slidesToShow = state.slidesToShow, children = props.children, showDots = props.showDots, infinite = props.infinite, slidesToSlide = common_1.getSlidesToSlide(state, props), nextMaximumSlides = currentSlide - slidesHavePassed - (0 < slidesHavePassed ? 0 : slidesToSlide), additionalSlides = (React.Children.toArray(children).length - slidesToShow) % slidesToSlide;
+    return nextPosition = 0 <= nextMaximumSlides ? (nextSlides = nextMaximumSlides, showDots && !infinite && 0 < additionalSlides && common_2.isInRightEnd(state) && (nextSlides = currentSlide - additionalSlides), -itemWidth * nextSlides) : nextSlides = nextMaximumSlides < 0 && 0 !== currentSlide ? 0 : void 0, {
+        nextSlides: nextSlides,
+        nextPosition: nextPosition
+    };
+}
+exports.populatePreviousSlides = populatePreviousSlides;
+
+},{"e638ee0fe3918325":"21dqq","7caeea1b5023cc0f":"imys0"}],"G455a":[function(require,module,exports,__globalThis) {
+"use strict";
+function populateSlidesOnMouseTouchMove(state, props, initialX, lastX, clientX, transformPlaceHolder) {
+    var direction, nextPosition, itemWidth = state.itemWidth, slidesToShow = state.slidesToShow, totalItems = state.totalItems, currentSlide = state.currentSlide, infinite = props.infinite, canContinue = !1, slidesHavePassedRight = Math.round((initialX - lastX) / itemWidth), slidesHavePassedLeft = Math.round((lastX - initialX) / itemWidth), isMovingLeft = initialX < clientX;
+    if (clientX < initialX && !!(slidesHavePassedRight <= slidesToShow)) {
+        direction = "right";
+        var translateXLimit = Math.abs(-itemWidth * (totalItems - slidesToShow)), nextTranslate = transformPlaceHolder - (lastX - clientX), isLastSlide = currentSlide === totalItems - slidesToShow;
+        (Math.abs(nextTranslate) <= translateXLimit || isLastSlide && infinite) && (nextPosition = nextTranslate, canContinue = !0);
+    }
+    isMovingLeft && slidesHavePassedLeft <= slidesToShow && (direction = "left", ((nextTranslate = transformPlaceHolder + (clientX - lastX)) <= 0 || 0 === currentSlide && infinite) && (canContinue = !0, nextPosition = nextTranslate));
+    return {
+        direction: direction,
+        nextPosition: nextPosition,
+        canContinue: canContinue
+    };
+}
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+}), exports.populateSlidesOnMouseTouchMove = populateSlidesOnMouseTouchMove;
+
+},{}],"eSnYr":[function(require,module,exports,__globalThis) {
+"use strict";
+var __extends = this && this.__extends || function() {
+    var extendStatics = function(d, b) {
+        return (extendStatics = Object.setPrototypeOf || ({
+            __proto__: []
+        }) instanceof Array && function(d, b) {
+            d.__proto__ = b;
+        } || function(d, b) {
+            for(var p in b)b.hasOwnProperty(p) && (d[p] = b[p]);
+        })(d, b);
+    };
+    return function(d, b) {
+        function __() {
+            this.constructor = d;
+        }
+        extendStatics(d, b), d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __);
+    };
+}();
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var React = require("9ce12e532842b2f0");
+function isMouseMoveEvent(e) {
+    return "clientY" in e;
+}
+exports.isMouseMoveEvent = isMouseMoveEvent;
+var Carousel = function(_super) {
+    function Carousel() {
+        return null !== _super && _super.apply(this, arguments) || this;
+    }
+    return __extends(Carousel, _super), Carousel;
+}(React.Component);
+exports.default = Carousel;
+
+},{"9ce12e532842b2f0":"21dqq"}],"eteDK":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var React = require("dadb39fb7b4bccab"), clones_1 = require("3733bb65c03788f6"), dots_1 = require("bd184b42affc4d77"), common_1 = require("c775be409c3d47dd"), Dots = function(_a) {
+    var props = _a.props, state = _a.state, goToSlide = _a.goToSlide, getState = _a.getState, showDots = props.showDots, customDot = props.customDot, dotListClass = props.dotListClass, infinite = props.infinite, children = props.children;
+    if (!showDots || common_1.notEnoughChildren(state)) return null;
+    var numberOfDotsToShow, currentSlide = state.currentSlide, slidesToShow = state.slidesToShow, slidesToSlide = common_1.getSlidesToSlide(state, props), childrenArr = React.Children.toArray(children);
+    numberOfDotsToShow = infinite ? Math.ceil(childrenArr.length / slidesToSlide) : Math.ceil((childrenArr.length - slidesToShow) / slidesToSlide) + 1;
+    var nextSlidesTable = dots_1.getLookupTableForNextSlides(numberOfDotsToShow, state, props, childrenArr), lookupTable = clones_1.getOriginalIndexLookupTableByClones(slidesToShow, childrenArr), currentSlides = lookupTable[currentSlide];
+    return React.createElement("ul", {
+        className: "react-multi-carousel-dot-list " + dotListClass
+    }, Array(numberOfDotsToShow).fill(0).map(function(_, index) {
+        var isActive, nextSlide;
+        if (infinite) {
+            nextSlide = nextSlidesTable[index];
+            var cloneIndex = lookupTable[nextSlide];
+            isActive = currentSlides === cloneIndex || cloneIndex <= currentSlides && currentSlides < cloneIndex + slidesToSlide;
+        } else {
+            var maximumNextSlide = childrenArr.length - slidesToShow, possibileNextSlides = index * slidesToSlide;
+            isActive = (nextSlide = maximumNextSlide < possibileNextSlides ? maximumNextSlide : possibileNextSlides) === currentSlide || nextSlide < currentSlide && currentSlide < nextSlide + slidesToSlide && currentSlide < childrenArr.length - slidesToShow;
+        }
+        return customDot ? React.cloneElement(customDot, {
+            index: index,
+            active: isActive,
+            key: index,
+            onClick: function() {
+                return goToSlide(nextSlide);
+            },
+            carouselState: getState()
+        }) : React.createElement("li", {
+            "data-index": index,
+            key: index,
+            className: "react-multi-carousel-dot " + (isActive ? "react-multi-carousel-dot--active" : "")
+        }, React.createElement("button", {
+            "aria-label": "Go to slide " + (index + 1),
+            onClick: function() {
+                return goToSlide(nextSlide);
+            }
+        }));
+    }));
+};
+exports.default = Dots;
+
+},{"dadb39fb7b4bccab":"21dqq","3733bb65c03788f6":"5iWMG","bd184b42affc4d77":"7PASH","c775be409c3d47dd":"imys0"}],"7PASH":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var clones_1 = require("3e49fddceae50e58"), common_1 = require("c42ba5e0a645aad4");
+function getLookupTableForNextSlides(numberOfDotsToShow, state, props, childrenArr) {
+    var table = {}, slidesToSlide = common_1.getSlidesToSlide(state, props);
+    return Array(numberOfDotsToShow).fill(0).forEach(function(_, i) {
+        var nextSlide = clones_1.getOriginalCounterPart(i, state, childrenArr);
+        if (0 === i) table[0] = nextSlide;
+        else {
+            var now = table[i - 1] + slidesToSlide;
+            table[i] = now;
+        }
+    }), table;
+}
+exports.getLookupTableForNextSlides = getLookupTableForNextSlides;
+
+},{"3e49fddceae50e58":"5iWMG","c42ba5e0a645aad4":"imys0"}],"kdfHd":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var React = require("f55e92446f7600d4"), LeftArrow = function(_a) {
+    var customLeftArrow = _a.customLeftArrow, getState = _a.getState, previous = _a.previous, disabled = _a.disabled, rtl = _a.rtl;
+    if (customLeftArrow) return React.cloneElement(customLeftArrow, {
+        onClick: function() {
+            return previous();
+        },
+        carouselState: getState(),
+        disabled: disabled,
+        rtl: rtl
+    });
+    var rtlClassName = rtl ? "rtl" : "";
+    return React.createElement("button", {
+        "aria-label": "Go to previous slide",
+        className: "react-multiple-carousel__arrow react-multiple-carousel__arrow--left " + rtlClassName,
+        onClick: function() {
+            return previous();
+        },
+        type: "button",
+        disabled: disabled
+    });
+};
+exports.LeftArrow = LeftArrow;
+var RightArrow = function(_a) {
+    var customRightArrow = _a.customRightArrow, getState = _a.getState, next = _a.next, disabled = _a.disabled, rtl = _a.rtl;
+    if (customRightArrow) return React.cloneElement(customRightArrow, {
+        onClick: function() {
+            return next();
+        },
+        carouselState: getState(),
+        disabled: disabled,
+        rtl: rtl
+    });
+    var rtlClassName = rtl ? "rtl" : "";
+    return React.createElement("button", {
+        "aria-label": "Go to next slide",
+        className: "react-multiple-carousel__arrow react-multiple-carousel__arrow--right " + rtlClassName,
+        onClick: function() {
+            return next();
+        },
+        type: "button",
+        disabled: disabled
+    });
+};
+exports.RightArrow = RightArrow;
+
+},{"f55e92446f7600d4":"21dqq"}],"8nm32":[function(require,module,exports,__globalThis) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: !0
+});
+var React = require("eb0fe8492571c66"), utils_1 = require("df415723d419f7d9"), CarouselItems = function(_a) {
+    var props = _a.props, state = _a.state, goToSlide = _a.goToSlide, clones = _a.clones, notEnoughChildren = _a.notEnoughChildren, itemWidth = state.itemWidth, children = props.children, infinite = props.infinite, itemClass = props.itemClass, itemAriaLabel = props.itemAriaLabel, partialVisbile = props.partialVisbile, partialVisible = props.partialVisible, _b = utils_1.getInitialState(state, props), flexBisis = _b.flexBisis, shouldRenderOnSSR = _b.shouldRenderOnSSR, domFullyLoaded = _b.domFullyLoaded, partialVisibilityGutter = _b.partialVisibilityGutter;
+    return _b.shouldRenderAtAll ? (partialVisbile && console.warn('WARNING: Please correct props name: "partialVisible" as old typo will be removed in future versions!'), React.createElement(React.Fragment, null, (infinite ? clones : React.Children.toArray(children)).map(function(child, index) {
+        return React.createElement("li", {
+            key: index,
+            "data-index": index,
+            onClick: function() {
+                props.focusOnSelect && goToSlide(index);
+            },
+            "aria-hidden": utils_1.getIfSlideIsVisbile(index, state) ? "false" : "true",
+            "aria-label": itemAriaLabel || (child.props.ariaLabel ? child.props.ariaLabel : null),
+            style: {
+                flex: shouldRenderOnSSR ? "1 0 " + flexBisis + "%" : "auto",
+                position: "relative",
+                width: domFullyLoaded ? ((partialVisbile || partialVisible) && partialVisibilityGutter && !notEnoughChildren ? itemWidth - partialVisibilityGutter : itemWidth) + "px" : "auto"
+            },
+            className: "react-multi-carousel-item " + (utils_1.getIfSlideIsVisbile(index, state) ? "react-multi-carousel-item--active" : "") + " " + itemClass
+        }, child);
+    }))) : null;
+};
+exports.default = CarouselItems;
+
+},{"eb0fe8492571c66":"21dqq","df415723d419f7d9":"9Pb3a"}],"kzF8x":[function() {},{}],"5Qdva":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$549c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$549c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _trendingData = require("./TrendingData");
+var _trendingDataDefault = parcelHelpers.interopDefault(_trendingData);
+var _shimmer = require("./shimmer");
+var _s = $RefreshSig$();
+const Trending = ()=>{
+    _s();
+    const [trending, setTrending] = (0, _react.useState)([]);
+    const [loading, setLoading] = (0, _react.useState)(true);
+    const [error, setError] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        TrendingItem();
+    }, []);
+    async function TrendingItem() {
+        try {
+            const response = await fetch("http://localhost:3500/api/trending");
+            if (!response.ok) throw new Error("Failed to fetch trending data");
+            const data = await response.json();
+            setTrending(data);
+        } catch (error) {
+            setError(error.message);
+        } finally{
+            setLoading(false);
+        }
+    }
+    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
+            fileName: "src/component/Trending.js",
+            lineNumber: 30,
+            columnNumber: 17
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/component/Trending.js",
+        lineNumber: 30,
+        columnNumber: 12
+    }, undefined);
+    if (error) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            "Error: ",
+            error
+        ]
+    }, void 0, true, {
+        fileName: "src/component/Trending.js",
+        lineNumber: 34,
+        columnNumber: 12
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "heading",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: "Trending"
+                    }, void 0, false, {
+                        fileName: "src/component/Trending.js",
+                        lineNumber: 41,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: "Explore the latest trends"
+                    }, void 0, false, {
+                        fileName: "src/component/Trending.js",
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/component/Trending.js",
+                lineNumber: 40,
+                columnNumber: 4
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "allcards",
+                children: trending.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _trendingDataDefault.default), {
+                        ...item
+                    }, item.id, false, {
+                        fileName: "src/component/Trending.js",
+                        lineNumber: 47,
+                        columnNumber: 12
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/component/Trending.js",
+                lineNumber: 44,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Trending, "v8ldNhJZpiReiWfepWgVMx3qonI=");
+_c = Trending;
+exports.default = Trending;
+var _c;
+$RefreshReg$(_c, "Trending");
+
+  $parcel$ReactRefreshHelpers$549c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./TrendingData":"3yz4J","./shimmer":"bltIQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3yz4J":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$4fed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4fed.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const TrendingData = ({ id, name, image, price })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "card",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: image,
+                    alt: name
+                }, void 0, false, {
+                    fileName: "src/component/TrendingData.js",
+                    lineNumber: 8,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: name
+                }, void 0, false, {
+                    fileName: "src/component/TrendingData.js",
+                    lineNumber: 9,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                    children: price
+                }, void 0, false, {
+                    fileName: "src/component/TrendingData.js",
+                    lineNumber: 10,
+                    columnNumber: 11
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/component/TrendingData.js",
+            lineNumber: 6,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/component/TrendingData.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = TrendingData;
+exports.default = TrendingData;
+var _c;
+$RefreshReg$(_c, "TrendingData");
+
+  $parcel$ReactRefreshHelpers$4fed.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4DMIN":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$637a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$637a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const HomeKitchen = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "HomeKitchen"
+    }, void 0, false, {
+        fileName: "src/component/HomeKitchen.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = HomeKitchen;
+exports.default = HomeKitchen;
+var _c;
+$RefreshReg$(_c, "HomeKitchen");
+
+  $parcel$ReactRefreshHelpers$637a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g048w":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$3275 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3275.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Beauty = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "Beauty"
+    }, void 0, false, {
+        fileName: "src/component/Beauty.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Beauty;
+exports.default = Beauty;
+var _c;
+$RefreshReg$(_c, "Beauty");
+
+  $parcel$ReactRefreshHelpers$3275.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"b6QeF":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$4db6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4db6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Stationary = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "Stationary"
+    }, void 0, false, {
+        fileName: "src/component/Stationary.js",
+        lineNumber: 4,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Stationary;
+exports.default = Stationary;
+var _c;
+$RefreshReg$(_c, "Stationary");
+
+  $parcel$ReactRefreshHelpers$4db6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jun0h":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$debb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$debb.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Electronics = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "Electronics"
+    }, void 0, false, {
+        fileName: "src/component/Electronics.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Electronics;
+exports.default = Electronics;
+var _c;
+$RefreshReg$(_c, "Electronics");
+
+  $parcel$ReactRefreshHelpers$debb.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jtVmd":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$90d0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$90d0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Books = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "Books;"
+    }, void 0, false, {
+        fileName: "src/component/Books.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Books;
+exports.default = Books;
+var _c;
+$RefreshReg$(_c, "Books");
+
+  $parcel$ReactRefreshHelpers$90d0.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kKzcM":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$8184 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8184.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Clothing = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "clothing"
+    }, void 0, false, {
+        fileName: "src/component/Clothing.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Clothing;
+exports.default = Clothing;
+var _c;
+$RefreshReg$(_c, "Clothing");
+
+  $parcel$ReactRefreshHelpers$8184.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ievuM":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$690e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$690e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Toys = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "Toys"
+    }, void 0, false, {
+        fileName: "src/component/Toys.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Toys;
+exports.default = Toys;
+var _c;
+$RefreshReg$(_c, "Toys");
+
+  $parcel$ReactRefreshHelpers$690e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1iu9v":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$1ea8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1ea8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const Mobiles = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "Mobiles Mobiles"
+    }, void 0, false, {
+        fileName: "src/component/Mobiles.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Mobiles;
+exports.default = Mobiles;
+var _c;
+$RefreshReg$(_c, "Mobiles");
+
+  $parcel$ReactRefreshHelpers$1ea8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["aQL8O","cLDdI","bNKaB"], "bNKaB", "parcelRequire94c2")
 
 //# sourceMappingURL=index.0641b553.js.map
