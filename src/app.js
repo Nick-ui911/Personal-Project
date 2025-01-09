@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./component/header";
-import Body from "./component/body";
+import Restaurant  from "./component/Restaurant ";
 import Footer from "./component/footer";
 import Cart from "./component/Cart";
 import Contact from "./component/Contact";
@@ -18,16 +18,20 @@ import UserAddress from "./component/UserAddress";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import store from "./utils/store";
-import Carousal from "./component/carousal";
+import Home from "./component/Home";
 import HomeKitchen from "./component/HomeKitchen";
 import Beauty from "./component/Beauty";
 import Stationary from "./component/Stationary";
 import Electronics from "./component/Electronics";
 import Books from "./component/Books";
-import Carousals from "./component/carousal";
 import Clothing from "./component/Clothing";
 import Toys from "./component/Toys";
 import Mobiles from "./component/Mobiles";
+import SpecificTrending from "./component/SpecificTrending";
+import TermCondition from "./component/TermCondition";
+import PrivacyPolicy from "./component/PrivacyPolicy";
+import Sellers from "./component/Sellers";
+import Products from "./component/Products";
 
 
 // import Dineout from "./component/Dineout";
@@ -60,11 +64,11 @@ const appRouter = createBrowserRouter([
     children: [ 
       {
         path: "/",
-        element: <Carousals/>,
+        element: <Home/>,
       },
       {
         path: "/restaurant",
-        element: <Body/>,
+        element: <Restaurant/>,
       },
       {
         path: "/about",
@@ -116,6 +120,10 @@ const appRouter = createBrowserRouter([
         element: <DineInHotel />,
       },
       {
+        path: "/trending/:id3",
+        element: <SpecificTrending />,
+      },
+      {
         path: "/useraddress",
         element: <UserAddress />,
       },
@@ -154,6 +162,22 @@ const appRouter = createBrowserRouter([
       {
         path: "/mobiles",
         element: <Mobiles/>,
+      },
+      {
+        path: "/termcondition",
+        element: <TermCondition/>,
+      },
+      {
+        path: "/privacypolicy",
+        element: <PrivacyPolicy/>,
+      },
+      {
+        path: "/sellers",
+        element: <Sellers/>,
+      },
+      {
+        path: "/products",
+        element: <Products/>,
       },
 
 
