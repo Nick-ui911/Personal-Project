@@ -46,6 +46,31 @@ body {
     margin-top: 20px;
     transition: background-color 0.3s;
 }
+/* Container for the cart logo */
+.cart-logo {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Icon design */
+.cart-icon {
+  font-size: 30px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.cart-logo:hover {
+  transform: scale(1.1);
+}
+
+.cart-logo:hover .cart-icon {
+  color: #007bff; /* Blue on hover */
+}
 .nav-item ul li:hover {
     background-color: #e9ecef;
 }

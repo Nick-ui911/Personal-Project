@@ -47,6 +47,29 @@ body {
   transition: background-color .3s;
 }
 
+.cart-logo {
+  color: #333;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform .3s;
+  display: inline-block;
+  position: relative;
+}
+
+.cart-icon {
+  color: #555;
+  font-size: 30px;
+  transition: color .3s;
+}
+
+.cart-logo:hover {
+  transform: scale(1.1);
+}
+
+.cart-logo:hover .cart-icon {
+  color: #007bff;
+}
+
 .nav-item ul li:hover {
   background-color: #e9ecef;
 }
