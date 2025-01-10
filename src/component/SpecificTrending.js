@@ -2,14 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/CartSlice";
-import { FaStar } from "react-icons/fa";
 import StarRating from "./StarRating";
+import UserContext from "../utils/UserContext";
+import { useContext } from "react";
 
 const SpecificTrending = () => {
   const [item, setItem] = useState({});
   const { id3 } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const { seller } = useContext(UserContext);
 
   useEffect(() => {
     TrendingData();
@@ -40,29 +43,39 @@ const SpecificTrending = () => {
       {/* Details Section */}
       <div className="details-section">
         <h1 className="item-name">{item.name}</h1>
-        <h2 className="item-price">Price: ${item.price}</h2>
+        <h2 className="item-price"> {item.price}</h2>
         <p className="item-description">{item.description}</p>
         <div className="button-container">
-          <button onClick={() => addTrendingItem(item)} className="order-button">
+          <button
+            onClick={() => addTrendingItem(item)}
+            className="order-button"
+          >
             ADD TO CART
           </button>
         </div>
+        <h4>Seller:{seller.name}</h4>
       </div>
 
       {/* Additional Navigation */}
       <div className="additional-data">
-  <div className="nav-buttons">
-    <button onClick={() => handleButtonClick("/review")} className="nav-button">
-      Reviews
-    </button>
-    <button onClick={() => handleButtonClick("/soldby")} className="nav-button">
-      Sold By
-    </button>
-  </div>
-  <div className="star-rating-section">
-    <StarRating />
-  </div>
-</div>
+        <div className="nav-buttons">
+          <button
+            onClick={() => handleButtonClick("/review")}
+            className="nav-button"
+          >
+            Reviews
+          </button>
+          <button
+            onClick={() => handleButtonClick("/soldby")}
+            className="nav-button"
+          >
+            Sold By
+          </button>
+        </div>
+        <div className="star-rating-section">
+          <StarRating />
+        </div>
+      </div>
     </div>
   );
 };

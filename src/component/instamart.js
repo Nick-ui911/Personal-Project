@@ -6,6 +6,7 @@ import useInstamartItem from "../utils/useInstamart";
 import useOnline from "../utils/useOnline";
 import Offline from "./Offline";
 import { Shimmer } from "./shimmer";
+import CarouselImage from "./CarouselImage";
 
 const Instamart = () => {
   const [item, allitem,loading, setItem, setAllItem,error] = useInstamartItem();
@@ -56,6 +57,7 @@ const Instamart = () => {
           Search
         </button>
       </div>
+      <CarouselImage/>
       {/* <p> you typed : {searchtxt}</p> */}
       <div className="allcards">
         {item.map((val) => {

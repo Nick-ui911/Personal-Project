@@ -628,6 +628,8 @@ var _useOnlineDefault = parcelHelpers.interopDefault(_useOnline);
 var _offline = require("./Offline");
 var _offlineDefault = parcelHelpers.interopDefault(_offline);
 var _shimmer = require("./shimmer");
+var _carouselImage = require("./CarouselImage");
+var _carouselImageDefault = parcelHelpers.interopDefault(_carouselImage);
 var _s = $RefreshSig$();
 const Instamart = ()=>{
     _s();
@@ -636,12 +638,12 @@ const Instamart = ()=>{
     const onlinecheck = (0, _useOnlineDefault.default)();
     if (!onlinecheck) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _offlineDefault.default), {}, void 0, false, {
         fileName: "src/component/instamart.js",
-        lineNumber: 17,
+        lineNumber: 18,
         columnNumber: 7
     }, undefined);
     if (loading === true) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmer.Shimmer), {}, void 0, false, {
         fileName: "src/component/instamart.js",
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 33
     }, undefined);
     if (error) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -651,7 +653,7 @@ const Instamart = ()=>{
         ]
     }, void 0, true, {
         fileName: "src/component/instamart.js",
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 22
     }, undefined); // Display error message if there is an error
     if (item.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -659,7 +661,7 @@ const Instamart = ()=>{
             children: "No data found!"
         }, void 0, false, {
             fileName: "src/component/instamart.js",
-            lineNumber: 26,
+            lineNumber: 27,
             columnNumber: 9
         }, undefined)
     }, void 0, false);
@@ -684,7 +686,7 @@ const Instamart = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/component/instamart.js",
-                        lineNumber: 34,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -696,13 +698,18 @@ const Instamart = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/component/instamart.js",
-                        lineNumber: 49,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/component/instamart.js",
-                lineNumber: 33,
+                lineNumber: 34,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carouselImageDefault.default), {}, void 0, false, {
+                fileName: "src/component/instamart.js",
+                lineNumber: 60,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -715,18 +722,18 @@ const Instamart = ()=>{
                             ...val
                         }, void 0, false, {
                             fileName: "src/component/instamart.js",
-                            lineNumber: 64,
+                            lineNumber: 66,
                             columnNumber: 15
                         }, undefined)
                     }, val.id, false, {
                         fileName: "src/component/instamart.js",
-                        lineNumber: 63,
+                        lineNumber: 65,
                         columnNumber: 13
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/component/instamart.js",
-                lineNumber: 60,
+                lineNumber: 62,
                 columnNumber: 7
             }, undefined)
         ]
@@ -748,7 +755,7 @@ $RefreshReg$(_c, "Instamart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Instacard":"jmbau","react-router-dom":"9xmpe","../utils/helper":"3GF3D","../utils/useInstamart":"5fmzm","../utils/useOnline":"74Yls","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Offline":"iYEaz","./shimmer":"bltIQ"}],"jmbau":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Instacard":"jmbau","react-router-dom":"9xmpe","../utils/helper":"3GF3D","../utils/useInstamart":"5fmzm","../utils/useOnline":"74Yls","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Offline":"iYEaz","./shimmer":"bltIQ","./CarouselImage":"jxNxH"}],"jmbau":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$a0a5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

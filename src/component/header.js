@@ -1,10 +1,8 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../utils/UserContext";
 
 const Header = () => {
-  const { user , setUser } = useContext(UserContext);
   return (
+    <>
     <div className="header">
       <img
         className="logo"
@@ -29,8 +27,7 @@ const Header = () => {
               ABOUT US
             </Link>
           </li>
-          
-         
+
           <li>
             <Link className="nav-link" to="/instamart">
               GROCERY
@@ -52,13 +49,18 @@ const Header = () => {
             </Link>
           </li>
           <li>
+            <Link className="nav-link" to="/trending">
+              TRENDING
+            </Link>
+          </li>
+          <li>
             <Link className="nav-link" to="/cart">
               CART
             </Link>
           </li>
         </ul>
       </nav>
-      <h3>{user.name}</h3>
+
       {/* ...user (spread operator) with the help of this it created copy of user
        object in the state and then changing that object in the state and then
         it is reflected in the component */}
@@ -68,6 +70,9 @@ const Header = () => {
         <button className="login-button">Login</button>
       </Link>
     </div>
+    
+    </>
+    
   );
 };
 

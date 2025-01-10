@@ -4,13 +4,12 @@ import { Shimmer } from "./shimmer";
 import { filterData } from "../utils/helper";
 import { Link } from "react-router-dom";
 
-
 const Trending = () => {
   const [trending, setTrending] = useState([]);
   const [searchTrending, setSearchTrending] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-    const [searchTxt, setSearchTxt] = useState("");
+  const [searchTxt, setSearchTxt] = useState("");
 
   useEffect(() => {
     TrendingItem();
@@ -33,27 +32,28 @@ const Trending = () => {
   }
 
   if (loading) {
-    return <div><Shimmer/></div>;
+    return (
+      <div>
+        <Shimmer />
+      </div>
+    );
   }
 
   if (error) {
     return <div>Error: {error}</div>;
   }
-   const handleSearch = () => {
-      if (searchTxt.trim() === "") {
-        setTrending(searchTrending); // Reset to full list if search text is empty
-      } else {
-        const filteredData = filterData(searchTxt, searchTrending);
-        setTrending(filteredData);
-      }
-    };
+  const handleSearch = () => {
+    if (searchTxt.trim() === "") {
+      setTrending(searchTrending); // Reset to full list if search text is empty
+    } else {
+      const filteredData = filterData(searchTxt, searchTrending);
+      setTrending(filteredData);
+    }
+  };
 
   return (
-    
-   <>
-  
-   <div className=" Trending-search-Bar">
-    
+    <>
+      <div className=" Trending-search-Bar">
         <input
           type="text"
           className="inputbox"
@@ -69,23 +69,18 @@ const Trending = () => {
         </button>
       </div>
 
-
-
-   <div className="heading">
+      <div className="heading">
         <h1>Trendings</h1>
         <p>Explore the latest trends</p>
       </div>
-    <div className="allcards" >
-         
-         {trending.map((item) => (
-           <Link  className="nick"
-           to={`/trending/${item.id}`}
-           key={item.id}>
-           <TrendingData  {...item} />
-           </Link>
-         ))}
-       </div>
-   </>
+      <div className="allcards">
+        {trending.map((item) => (
+          <Link className="nick" to={`/trending/${item.id}`} key={item.id}>
+            <TrendingData {...item} />
+          </Link>
+        ))}
+      </div>
+    </>
   );
 };
 

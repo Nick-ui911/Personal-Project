@@ -3,13 +3,17 @@ import useSpecificInstaItem from "../utils/useSpecificInstamartItem";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/CartSlice";
 import StarRating from "./StarRating";
+import UserContext from "../utils/UserContext";
+import { useContext } from "react";
 
 
 const Instaitem = () => {
   const { id1 } = useParams();
   const mitem = useSpecificInstaItem(id1);
+    const { seller } = useContext(UserContext);
 
   const dispatch = useDispatch();
+
 
   const addInstaItem = (item) => {
     dispatch(addItem(item));
@@ -27,6 +31,7 @@ const Instaitem = () => {
         <h1 className="item-name">Item Name: {mitem.name}</h1>
         <h2 className="item-price">Price: ${mitem.price}</h2>
       </div>
+      <h4>Seller:{seller.name}</h4>
       <div className="additional-data">
   <div className="nav-buttons">
     <button onClick={() => handleButtonClick("/review")} className="nav-button">

@@ -30,10 +30,10 @@ import Mobiles from "./component/Mobiles";
 import SpecificTrending from "./component/SpecificTrending";
 import TermCondition from "./component/TermCondition";
 import PrivacyPolicy from "./component/PrivacyPolicy";
-import Sellers from "./component/Sellers";
 import Products from "./component/Products";
 import Review from "./component/Review";
 import SoldBy from "./component/SoldBy";
+import Trending from "./component/Trending";
 
 
 // import Dineout from "./component/Dineout";
@@ -42,14 +42,14 @@ const Dineout = lazy(() => import("./component/Dineout"));
 const Instamart = lazy(() => import("./component/instamart"));
 
 const Applayout = () => {
-  const [user, setUser] = useState({
-    name: "user",
+  const [seller, setSeller] = useState({
+    name: "Raj Babbar",
     email: "nbaghel392@gmail.com",
   });
 
   return (
    <Provider store = {store}>
-    <UserContext.Provider value={{ user : user,setUser : setUser }}>
+    <UserContext.Provider value={{ seller : seller,setSeller : setSeller }}>
       <Header />
       <Outlet />
       <Footer />
@@ -174,10 +174,6 @@ const appRouter = createBrowserRouter([
         element: <PrivacyPolicy/>,
       },
       {
-        path: "/sellers",
-        element: <Sellers/>,
-      },
-      {
         path: "/products",
         element: <Products/>,
       },
@@ -188,6 +184,10 @@ const appRouter = createBrowserRouter([
       {
         path:"/soldby",
         element:<SoldBy/>
+      },
+      {
+        path:"/trending",
+        element:<Trending/>
       }
 
 

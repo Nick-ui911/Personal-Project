@@ -3,6 +3,7 @@ import React from 'react'
 const TrendingData = ({id,name,image,price}) => {
   return (
     <div>
+      <></>
       <div className='card' >
        
           <img src={image} alt={name} />
