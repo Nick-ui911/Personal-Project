@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useSpecificInstaItem from "../utils/useSpecificInstamartItem";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/CartSlice";
+import StarRating from "./StarRating";
 
 
 const Instaitem = () => {
@@ -26,6 +27,19 @@ const Instaitem = () => {
         <h1 className="item-name">Item Name: {mitem.name}</h1>
         <h2 className="item-price">Price: ${mitem.price}</h2>
       </div>
+      <div className="additional-data">
+  <div className="nav-buttons">
+    <button onClick={() => handleButtonClick("/review")} className="nav-button">
+      Reviews
+    </button>
+    <button onClick={() => handleButtonClick("/soldby")} className="nav-button">
+      Sold By
+    </button>
+  </div>
+  <div className="star-rating-section">
+    <StarRating />
+  </div>
+</div>
     </div>
   );
 };

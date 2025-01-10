@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/CartSlice";
+import StarRating from './StarRating';
 
 
 const DineInHotel = () => {
@@ -28,6 +29,17 @@ const DineInHotel = () => {
         <div className="dinein-container">
             <div className="image-section">
                 <img src={Ditem.image} alt={Ditem.name} className="hotel-image" />
+                <div className="additional-data">
+  <div className="nav-buttons">
+    <button onClick={() => handleButtonClick("/review")} className="nav-button">
+      Reviews
+    </button>
+   
+  </div>
+  <div className="star-rating-section">
+    <StarRating />
+  </div>
+</div>
                 <div className="button-container">
                     <button className="order-button" onClick={()=>addHotelItem(Ditem)}>BOOK NOW</button>
                 </div>

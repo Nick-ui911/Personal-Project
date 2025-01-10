@@ -3,6 +3,7 @@ import { Shimmer } from "./shimmer";
 import useRestaurant from "../utils/useRestaurant";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/CartSlice";
+import StarRating from "./StarRating";
 
 const RestaurantMenu = () => {
   const { id } = useParams();
@@ -23,6 +24,19 @@ const RestaurantMenu = () => {
           alt={restaurant.name}
           className="restaurant-image"
         />
+        <div className="additional-data">
+          <div className="nav-buttons">
+            <button
+              onClick={() => handleButtonClick("/review")}
+              className="nav-button"
+            >
+              Reviews
+            </button>
+          </div>
+          <div className="star-rating-section">
+            <StarRating />
+          </div>
+        </div>
       </div>
       <div className="details-section">
         <h1 className="restaurant-name">Restaurant Name: {restaurant.name}</h1>

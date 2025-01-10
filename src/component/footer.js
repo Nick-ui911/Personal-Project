@@ -1,5 +1,9 @@
 import React, { useContext } from "react";
 import UserContext from "../utils/UserContext";
+import { FaInstagramSquare } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { FaFacebookSquare } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io";
 
 const Footer = () => {
   const { user } = useContext(UserContext);
@@ -89,16 +93,17 @@ const Footer = () => {
             <span>Connect with Us</span>
             <div className="social-icons">
               <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-facebook-f"></i>
+              <FaFacebookSquare />
+
               </a>
               <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter"></i>
+              <BsTwitterX />
               </a>
               <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-instagram"></i>
+              <FaInstagramSquare />
               </a>
               <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-youtube"></i>
+              <IoLogoYoutube />
               </a>
             </div>
             <div className="app-download">

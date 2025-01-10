@@ -32,6 +32,8 @@ import TermCondition from "./component/TermCondition";
 import PrivacyPolicy from "./component/PrivacyPolicy";
 import Sellers from "./component/Sellers";
 import Products from "./component/Products";
+import Review from "./component/Review";
+import SoldBy from "./component/SoldBy";
 
 
 // import Dineout from "./component/Dineout";
@@ -179,6 +181,14 @@ const appRouter = createBrowserRouter([
         path: "/products",
         element: <Products/>,
       },
+      {
+        path:"/review",
+        element:<Review/>
+      },
+      {
+        path:"/soldby",
+        element:<SoldBy/>
+      }
 
 
     ],
